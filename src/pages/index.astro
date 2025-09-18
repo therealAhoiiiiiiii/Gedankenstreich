@@ -1,0 +1,146 @@
+---
+// Astro-Komponenten und Logik bleiben hier
+---
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gedankenstreich</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="scene-container">
+        
+        <header class="main-header">
+            <!-- NEU: Die stabile, pure CSS-Variante mit zwei Containern -->
+            <h1 id="gedankenstreich-title">
+                <span id="part1">Gedanken</span>
+                <span id="part2-wrapper">
+                    <span class="anim-text" id="strich-dash">strich –</span>
+                    <span class="anim-text" id="streich">streich</span>
+                </span>
+            </h1>
+        </header>
+
+        <!-- Der Rest des HTML bleibt unverändert -->
+        <div class="top-left-text">
+            <p class="comment">// Keine Logik für den Moment ---</p>
+            <h1>Ahoiiiiiiii</h1>
+            <p class="subtitle">Digitalsein, Politischsein, Aufmerksamsein,<br>von der Straße aufheben lernen.</p>
+            <h2>Wenn KI auf KI trifft - Die Trilogie</h2>
+        </div>
+        <span class="label-synapse">Synapsenflutottomant</span>
+        <span class="label-drama">Begriffsdram</span>
+        <span class="label-verlust">Beziehungskontrollverlust</span>
+        <div class="glowing-core"></div>
+    </main>
+
+<style>
+      :root {
+        --glow-color: rgba(106, 159, 221, 0.6); 
+        --text-color: #c7d3e1;
+        --heading-color: #e6d8b9; 
+        --font-main: 'Segoe UI', 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      body {
+        margin: 0; font-family: var(--font-main); color: var(--text-color);
+        background-color: #0A141D; overflow: hidden;
+      }
+
+      .scene-container {
+        position: relative; width: 100vw; height: 100vh;
+        background-image: url('/hintergrund.jpg');
+        background-size: cover; background-position: center center;
+      }
+
+      .main-header { position: absolute; top: 5%; left: 0; width: 100%; z-index: 10; text-align: center; }
+
+      h1#gedankenstreich-title {
+        font-family: var(--font-main); font-size: 4rem; color: var(--heading-color);
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+      }
+
+      /* Stufe 1: "Gedanken" erscheint und bleibt */
+      #part1 {
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out forwards;
+        animation-delay: 2.5s;
+      }
+
+      /* Wrapper für den animierten zweiten Teil */
+      #part2-wrapper {
+        position: relative; /* Wichtig für die Positionierung der Kinder */
+      }
+      /* Unsichtbarer Platzhalter, der die stabile Breite garantiert */
+      #part2-wrapper::after {
+          content: 'strich –';
+          visibility: hidden;
+      }
+      
+      /* Gemeinsame Basis für die animierten Texte im rechten Container */
+      .anim-text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+      }
+
+      /* Stufe 2: "strich –" erscheint und verschwindet */
+      #strich-dash {
+          animation: flashInAndOut 3s ease-in-out forwards;
+          animation-delay: 3s;
+      }
+
+      /* Stufe 3: "streich" erscheint und bleibt */
+      #streich {
+          animation: fadeIn 1.5s ease-in forwards;
+          animation-delay: 5.5s;
+      }
+
+      /* --- Keyframes --- */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes flashInAndOut {
+        0% { opacity: 0; }
+        33% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+
+      /* --- Der Rest des CSS bleibt unverändert --- */
+      .top-left-text { position: absolute; top: 8%; left: 5%; text-align: left; }
+      .top-left-text .comment { font-size: 1.1em; opacity: 0.7; margin-bottom: 2em; }
+      .top-left-text h1 { 
+        font-family: var(--font-main); font-size: 4.5em; color: var(--heading-color); 
+        margin: 0; font-weight: 600;
+        opacity: 0; animation: fadeIn 2s ease-out forwards; animation-delay: 0.5s;
+      }
+      .top-left-text .subtitle { font-size: 1.6em; margin: 0.5em 0 2em 0; line-height: 1.4; }
+      .top-left-text h2 { font-family: var(--font-main); font-size: 2.2em; color: var(--heading-color); font-weight: 600; }
+      .label-synapse, .label-drama, .label-verlust {
+        position: absolute; color: var(--heading-color); font-family: var(--font-main);
+        opacity: 0; animation: fadeIn 2s ease-out forwards;
+      }
+      .label-synapse { font-size: 1.8em; top: 45%; left: 5%; animation-delay: 1s; }
+      .label-drama { font-size: 1.8em; top: 75%; left: 25%; animation-delay: 1.5s; }
+      .label-verlust { font-size: 1.8em; bottom: 22%; right: 8%; animation-delay: 2s; }
+      .glowing-core {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)); z-index: 1; width: 180px; height: 180px; border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+        box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); animation: subtle-pulse 5s infinite ease-in-out;
+      }
+      @keyframes subtle-pulse {
+        0%, 100% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(0.95); box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); opacity: 0.8; }
+        50% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(1.05); box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.15); opacity: 1; }
+      }
+</style>
+</body>
+</html>
