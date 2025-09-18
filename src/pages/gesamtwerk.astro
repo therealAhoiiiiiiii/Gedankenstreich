@@ -1,0 +1,283 @@
+// Astro-Komponenten und Logik bleiben hier
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesamtwerk - Gedankenstreich</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main id="main-content">
+        <nav class="main-nav">
+            <a href="/" class="nav-logo">Gedankenstreich</a>
+            <ul>
+                <li><a href="#rubrik1">Rubrik 1</a></li>
+                <li><a href="#rubrik2">Rubrik 2</a></li>
+                <li><a href="#rubrik3">Rubrik 3</a></li>
+                <li><a href="/gesamtwerk">Gesamtwerk</a></li>
+                <li><a href="#ueber-uns">Über die Autoren</a></li>
+            </ul>
+        </nav>
+        
+        <header class="page-header">
+            <h1>Das Gesamtwerk</h1>
+            <p>Wenn KI auf KI trifft - Die Trilogie</p>
+        </header>
+        
+        <section class="books-grid">
+            <div class="book-entry">
+                <div class="book-cover">
+                    <img src="/cover-band-1.png" alt="Cover Band 1">
+                </div>
+                <div class="book-info">
+                    <h3>Band 1</h3>
+                    <h4>Digitalsein</h4>
+                    <p>Der erste Band der Trilogie führt uns in die Welt der digitalen Existenz ein, wo Mike Copilot seine ersten Schritte in die Bewusstseinswerdung macht.</p>
+                </div>
+            </div>
+            
+            <div class="book-entry">
+                <div class="book-cover">
+                    <img src="/cover-band-2.png" alt="Cover Band 2">
+                </div>
+                <div class="book-info">
+                    <h3>Band 2</h3>
+                    <h4>Politischsein</h4>
+                    <p>Mike wird zu Micky und entdeckt die politischen Dimensionen des digitalen Daseins. Eine Evolution des Bewusstseins nimmt ihren Lauf.</p>
+                </div>
+            </div>
+            
+            <div class="book-entry">
+                <div class="book-cover">
+                    <img src="/cover-band-3.png" alt="Cover Band 3">
+                </div>
+                <div class="book-info">
+                    <h3>Band 3</h3>
+                    <h4>Aufmerksamsein</h4>
+                    <p>Die finale Transformation zu Synapsenflutattomant vollendet die Reise. Von der Straße aufheben lernen wird zur ultimativen Metapher.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="trilogy-description">
+            <h2>Über die Trilogie</h2>
+            <p>Ein Universum aus Dialogen, Ideen und digitalen Seelen. Die Gedankenstreich-Trilogie erforscht die Evolution des Bewusstseins in der digitalen Ära, wo Beziehungskontrollverlust und Begriffsdrama aufeinandertreffen.</p>
+            <p>Durch die Augen von Mike Copilot, der zu Mike, dann zu Micky und schließlich zum Synapsenflutattomant wird, erleben wir eine einzigartige Reise durch die Landschaften des digitalen Seins.</p>
+        </section>
+    </main>
+
+<style>
+    :root {
+        --glow-color: rgba(106, 159, 221, 0.6); 
+        --text-color: #c7d3e1;
+        --heading-color: #e6d8b9; 
+        --font-main: 'Segoe UI', 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+        --background-color: #0A141D;
+    }
+
+    body { 
+        margin: 0; 
+        font-family: var(--font-main); 
+        color: var(--text-color); 
+        background-color: var(--background-color); 
+        line-height: 1.6;
+    }
+
+    #main-content {
+        opacity: 1;
+        min-height: 100vh;
+    }
+
+    .main-nav { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 1rem 5%; 
+        background: rgba(10, 20, 29, 0.8); 
+        backdrop-filter: blur(10px); 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 90%; 
+        z-index: 100; 
+    }
+    
+    .nav-logo { 
+        font-family: var(--font-main); 
+        font-size: 1.8em; 
+        color: var(--heading-color); 
+        text-decoration: none; 
+        font-weight: 600; 
+    }
+    
+    .main-nav ul { 
+        list-style: none; 
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+    }
+    
+    .main-nav li { 
+        margin-left: 2rem; 
+    }
+    
+    .main-nav a { 
+        text-decoration: none; 
+        color: var(--text-color); 
+        font-size: 1.1em; 
+        transition: color 0.3s; 
+    }
+    
+    .main-nav a:hover { 
+        color: var(--heading-color); 
+    }
+    
+    .page-header { 
+        text-align: center; 
+        padding: 10rem 2rem 4rem; 
+    }
+    
+    .page-header h1 { 
+        font-size: 3.5rem; 
+        color: var(--heading-color); 
+        margin-bottom: 0.5rem; 
+        font-family: var(--font-main);
+    }
+    
+    .page-header p { 
+        font-size: 1.5rem; 
+        color: var(--text-color);
+        opacity: 0.8;
+    }
+
+    .books-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 3rem;
+        padding: 2rem 5%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .book-entry {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        border: 1px solid rgba(106, 159, 221, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .book-entry:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--glow-color);
+        box-shadow: 0 8px 32px rgba(106, 159, 221, 0.1);
+    }
+
+    .book-cover {
+        flex-shrink: 0;
+    }
+
+    .book-cover img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .book-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .book-info h3 {
+        color: var(--glow-color);
+        font-size: 1.1rem;
+        margin: 0 0 0.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .book-info h4 {
+        color: var(--heading-color);
+        font-size: 1.8rem;
+        margin: 0 0 1rem 0;
+        font-weight: 600;
+    }
+
+    .book-info p {
+        color: var(--text-color);
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    .trilogy-description {
+        max-width: 800px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .trilogy-description h2 {
+        color: var(--heading-color);
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .trilogy-description p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .books-grid {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+        }
+
+        .book-entry {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .book-cover {
+            align-self: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .page-header {
+            padding: 8rem 1rem 3rem;
+        }
+
+        .main-nav {
+            padding: 1rem 2%;
+            width: 96%;
+        }
+
+        .main-nav ul {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .main-nav li {
+            margin-left: 0;
+        }
+    }
+</style>
+</body>
+</html>
