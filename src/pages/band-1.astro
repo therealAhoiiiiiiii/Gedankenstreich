@@ -1,0 +1,151 @@
+---
+// Seite für Band I, extrahiert aus dem Gesamtwerk-Entwurf
+---
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band I: Die erschöpfte Republik – Gedankenstreich</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="/" class="nav-logo">Gedankenstreich</a>
+        <ul>
+            <li><a href="/gesamtwerk" class="active">Gesamtwerk</a></li>
+            <li><a href="/offene-briefe">Offene Briefe</a></li>
+            <li><a href="/making-of">Making of</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/fruehwerk">Frühwerk</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-container">
+        <header class="page-header">
+            <h1>Band I – Die erschöpfte Republik</h1>
+            <p class="subtitle">Ein Dialog zwischen Ahoiiiiiiii & Synapsenflutattomant</p>
+        </header>
+
+        <section class="trilogy-toc">
+            <article class="band">
+                <ol class="chapter-list">
+                    <li><a href="/das-werk/kapitel-1">Demokratie – Die Herrschaft des Volkes</a></li>
+                    <li><a href="/das-werk/kapitel-2">Die Wiedervereinigung</a></li>
+                    <li><a href="/das-werk/kapitel-3">Parteienkrise</a></li>
+                    <li><a href="/das-werk/kapitel-4">Ja ich, der Steuerzahler (l'état c'est moi!)</a></li>
+                    <li><a href="/das-werk/kapitel-5">Putins Angriffskrieg auf die Ukraine</a></li>
+                    <li><a href="/das-werk/kapitel-6">Weltmacht Europa oder Memme Europa?</a></li>
+                    <li><a href="/das-werk/kapitel-7">Kiew ruft, Kiev vous appelle, Kyjiw calling – M&M&S und Europas Stunde der Entscheidung</a></li>
+                    <li><a href="/das-werk/kapitel-8">Die seltsamen Verwandlungen des Elon Musk</a></li>
+                    <li><a href="/das-werk/kapitel-9">Erinnerungskultur, Boomer & die Mitte</a></li>
+                </ol>
+            </article>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <a href="#impressum">Impressum</a>
+        <p>&copy; 2024 Gedankenstreich. Alle Rechte vorbehalten.</p>
+    </footer>
+
+<style>
+    :root {
+        --text-color: #c7d3e1;
+        --heading-color: #e6d8b9; 
+        --font-main: 'Segoe UI', 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-serif: 'Lora', serif;
+        --background-color: #0A141D;
+        --card-background: rgba(22, 34, 47, 0.7);
+        --link-hover-color: #d4a373;
+    }
+
+    body {
+        margin: 0;
+        font-family: var(--font-main);
+        color: var(--text-color);
+        background-color: var(--background-color);
+        background-image: url('/hintergrund.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+
+    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; left: 0; width: 90%; z-index: 100; }
+    .nav-logo { font-family: var(--font-main); font-size: 2em; color: var(--heading-color); text-decoration: none; font-weight: 600; }
+    .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+    .main-nav li { margin-left: 2.5rem; }
+    .main-nav a { text-decoration: none; color: var(--text-color); font-size: 1.25em; transition: color 0.3s; }
+    .main-nav a:hover, .main-nav a.active { color: var(--heading-color); font-weight: 600; }
+
+    .content-container {
+        max-width: 1000px;
+        margin: 4rem auto;
+        padding: 3rem 4rem;
+        background: rgba(10, 20, 29, 0.75); 
+        backdrop-filter: blur(8px);
+        border-radius: 8px;
+        border: 1px solid rgba(199, 211, 225, 0.1);
+    }
+    
+    .page-header { text-align: center; margin-bottom: 4rem; }
+    .page-header h1 { font-family: var(--font-serif); font-size: 4rem; color: var(--heading-color); margin: 0 0 0.5rem; }
+    .page-header .subtitle { font-family: var(--font-serif); font-size: 1.6rem; margin-top: 0; color: var(--text-color); opacity: 0.9; }
+
+    .trilogy-toc { display: grid; grid-template-columns: 1fr; gap: 4rem; }
+    
+    .band h2 { /* This style is not used on this page, but kept for consistency */
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: var(--heading-color);
+        border-bottom: 2px solid rgba(230, 216, 185, 0.5);
+        padding-bottom: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .chapter-list {
+        list-style: none;
+        padding-left: 0;
+        counter-reset: chapter-counter;
+    }
+    .chapter-list li {
+        font-size: 1.4em;
+        margin-bottom: 1.25rem;
+        padding-left: 3.5rem;
+        position: relative;
+    }
+    .chapter-list li::before {
+        counter-increment: chapter-counter;
+        content: counter(chapter-counter) ".";
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: 600;
+        color: var(--heading-color);
+        opacity: 0.8;
+        font-family: var(--font-serif);
+    }
+    .chapter-list a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s, background-position 0.4s ease-out;
+        background: linear-gradient(to right, var(--link-hover-color), var(--link-hover-color));
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        padding-bottom: 2px;
+    }
+    .chapter-list a:hover {
+        color: var(--link-hover-color);
+        background-size: 100% 2px;
+    }
+
+    .main-footer { text-align: center; padding: 2rem 5% 1.5rem; border-top: 1px solid rgba(106, 159, 221, 0.2); margin-top: 2rem; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); }
+    .main-footer a { color: var(--text-color); text-decoration: none; margin-right: 1rem; transition: color 0.3s; font-size: 1.1em; }
+    .main-footer a:hover { color: var(--heading-color); }
+    .main-footer p { font-size: 1em; }
+</style>
+</body>
+</html>

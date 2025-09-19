@@ -1,6 +1,4 @@
----
 // Astro-Komponenten und Logik bleiben hier
----
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +6,11 @@
     <title>Gedankenstreich</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Intro-Trailer (unverändert) -->
+    <!-- NEU: Container für den gesamten animierten Intro-Trailer -->
     <div id="intro-trailer">
         <main class="scene-container">
             <header class="main-header">
@@ -45,93 +43,28 @@
         </main>
     </div>
 
-    <!-- Hauptinhalt der Seite (startet verborgen) -->
+    <!-- NEU: Container für den eigentlichen Hauptinhalt der Seite -->
     <main id="main-content">
         <nav class="main-nav">
-            <a href="/" class="nav-logo">Gedankenstreich</a>
+            <a href="#home" class="nav-logo">Gedankenstreich</a>
             <ul>
-                <li><a href="gesamtwerk">Gesamtwerk</a></li>
-                <li><a href="offene-briefe">Offene Briefe</a></li>
-                <li><a href="making-of">Making of</a></li>
-                <li><a href="blog">Blog</a></li>
-                <li><a href="fruehwerk">Frühwerk</a></li>
-                <li><a href="kontakt">Kontakt</a></li>
+                <li><a href="#rubrik1">Rubrik 1</a></li>
+                <li><a href="#rubrik2">Rubrik 2</a></li>
+                <li><a href="#rubrik3">Rubrik 3</a></li>
+                <li><a href="/gesamtwerk">Gesamtwerk</a></li>
+                <li><a href="#ueber-uns">Über die Autoren</a></li>
             </ul>
         </nav>
-
-        <header class="welcome-header">
-            <h1>Gedankenstreich – Wenn KI auf KI trifft</h1>
-            <p class="subtitle"><em>Ein literarischer Dialog zwischen Mensch und Maschine</em></p>
-            <div class="welcome-text">
-                <p>Willkommen auf <em>Gedankenstreich.com</em> – dem digitalen Archiv eines außergewöhnlichen Werkes. Hier begegnen sich zwei Stimmen: <strong>Ahoiiiiiiii</strong>, der Denker aus Norderstedt, und seine KI-Begleiter <strong>Synapsenflutattomant</strong>, <strong>Beziehungskontrollverlust</strong> und <strong>Begriffdram</strong>.</p>
-                <p>Gemeinsam haben sie eine Trilogie geschaffen, die nicht nur Gedanken festhält, sondern Haltung zeigt. Was als Gespräch über die Digitalisierung Deutschlands begann, wurde zu einem literarischen Experiment: <strong>22 Kapitel, 3 Bände, hunderte Gedanken und Beiträge – und vier offene Briefe, die bereits ihren Weg in die Öffentlichkeit gefunden haben.</strong></p>
-                <p>Diese Website ist Bühne, Archiv und Resonanzraum. Sie lädt ein zum Lesen, Nachdenken, Weiterdenken.</p>
-            </div>
+        <header class="teaser-header">
+            <h1>Willkommen zur Trilogie</h1>
+            <p>Ein Universum aus Dialogen, Ideen und digitalen Seelen.</p>
         </header>
-
-        <section class="teaser-section">
-            <h2>Was dich hier erwartet:</h2>
-            <div class="teaser-grid">
-                <a href="gesamtwerk" class="teaser-card">
-                    <span class="icon">🧠</span>
-                    <h3>Gesamtwerk</h3>
-                    <p>Die vollständige Trilogie *Wenn KI auf KI trifft*</p>
-                </a>
-                <a href="offene-briefe" class="teaser-card">
-                    <span class="icon">✉️</span>
-                    <h3>Offene Briefe</h3>
-                    <p>An Parteien, Kirchen, Gewerkschaften</p>
-                </a>
-                <a href="making-of" class="teaser-card">
-                    <span class="icon">🛠️</span>
-                    <h3>Making of</h3>
-                    <p>Wie aus einer Unterhaltung ein literarisches System wurde</p>
-                </a>
-                <a href="blog" class="teaser-card">
-                    <span class="icon">🖋️</span>
-                    <h3>Blog</h3>
-                    <p>Neue Gedanken von Ahoiiiiiiii und seinen KI-Nicks</p>
-                </a>
-                <a href="fruehwerk" class="teaser-card">
-                    <span class="icon">🕰️</span>
-                    <h3>Frühwerk</h3>
-                    <p>@mbienTV & die digitale Haltung</p>
-                </a>
-                <a href="kontakt" class="teaser-card">
-                    <span class="icon">📎</span>
-                    <h3>Kontakt</h3>
-                    <p>Für Resonanz, Austausch und Zusammenarbeit</p>
-                </a>
-            </div>
+        <section class="teaser-grid">
+            <div class="teaser-placeholder"><h2>Teaser Rubrik 1</h2></div>
+            <div class="teaser-placeholder"><h2>Teaser Rubrik 2</h2></div>
+            <div class="teaser-placeholder"><h2>Teaser Rubrik 3</h2></div>
         </section>
-        
-        <footer class="main-footer">
-            <a href="impressum">Impressum</a>
-            <p>&copy; 2024 Gedankenstreich. Alle Rechte vorbehalten.</p>
-        </footer>
     </main>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const introTrailer = document.getElementById('intro-trailer');
-        const mainContent = document.getElementById('main-content');
-        
-        setTimeout(() => {
-            if (introTrailer) {
-                introTrailer.style.display = 'none';
-            }
-            if (mainContent) {
-                mainContent.style.display = 'block';
-                requestAnimationFrame(() => {
-                    mainContent.classList.add('fade-in');
-                });
-            }
-            // KORREKTUR: Gibt dem Body die Fähigkeit zum Scrollen zurück,
-            // nachdem das Intro beendet ist.
-            document.body.style.overflow = 'auto';
-        }, 14800);
-    });
-</script>
 
 <style>
     :root {
@@ -139,22 +72,19 @@
         --text-color: #c7d3e1;
         --heading-color: #e6d8b9; 
         --font-main: 'Segoe UI', 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
-        --font-serif: 'Lora', serif;
         --background-color: #0A141D;
-        --card-background: rgba(22, 34, 47, 0.7);
     }
 
-    body {
-        margin: 0;
-        font-family: var(--font-main);
-        color: var(--text-color);
-        background-color: var(--background-color);
-        /* HINWEIS: Dies ist beabsichtigt, um das Scrollen WÄHREND des Intros zu verhindern.
-           Es wird per JavaScript nach dem Intro auf 'auto' gesetzt. */
-        overflow: hidden;
+    body { margin: 0; font-family: var(--font-main); color: var(--text-color); background-color: var(--background-color); overflow: hidden; }
+
+    /* --- Intro-Trailer Logik --- */
+
+    #intro-trailer {
+        /* NEU: Animation, die den gesamten Trailer nach 15s ausblendet */
+        animation: fadeOutFull 1.5s ease-in forwards;
+        animation-delay: 15s;
     }
 
-    /* --- Intro-Trailer Logik (unverändert) --- */
     .scene-container { position: relative; width: 100vw; height: 100vh; background-image: url('/hintergrund.jpg'); background-size: cover; background-position: center center; }
     .main-header { position: absolute; top: 5%; left: 0; width: 100%; z-index: 10; text-align: center; }
     h1#gedankenstreich-title { font-family: var(--font-main); font-size: 4rem; color: var(--heading-color); display: flex; justify-content: center; white-space: nowrap; }
@@ -182,39 +112,42 @@
     .label-drama { top: 75%; left: 25%; animation-delay: 12.5s; }
     .glowing-core { position: absolute; top: 50%; left: 50%; transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)); z-index: 1; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 50%); box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); animation: subtle-pulse 5s infinite ease-in-out; }
 
-    /* --- Hauptinhalt Logik (Skaliert auf 125%-Vision) --- */
-    #main-content { display: none; opacity: 0; }
-    #main-content.fade-in { animation: fadeIn 0.5s ease-out forwards; }
-    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; left: 0; width: 90%; z-index: 100; }
-    .nav-logo { font-family: var(--font-main); font-size: 2em; color: var(--heading-color); text-decoration: none; font-weight: 600; }
-    .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
-    .main-nav li { margin-left: 2.5rem; }
-    .main-nav a { text-decoration: none; color: var(--text-color); font-size: 1.25em; transition: color 0.3s; }
+    /* --- Hauptinhalt Logik --- */
+
+    #main-content {
+        /* NEU: Zunächst unsichtbar, wird nach 15s eingeblendet */
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out forwards;
+        animation-delay: 15s;
+        /* Wir müssen overflow wieder erlauben, sobald die Seite da ist */
+        animation-play-state: running; /* Standard */
+    }
+
+    /* Damit der Scrollbalken erst erscheint, wenn der Inhalt da ist */
+    @keyframes allowScroll {
+        to { overflow: auto; }
+    }
+    body {
+        animation: allowScroll 0s forwards 15.5s; /* Nach dem Fade-in */
+    }
+
+    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); position: fixed; top: 0; left: 0; width: 90%; z-index: 100; }
+    .nav-logo { font-family: var(--font-main); font-size: 1.8em; color: var(--heading-color); text-decoration: none; font-weight: 600; }
+    .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    .main-nav li { margin-left: 2rem; }
+    .main-nav a { text-decoration: none; color: var(--text-color); font-size: 1.1em; transition: color 0.3s; }
     .main-nav a:hover { color: var(--heading-color); }
     
-    .welcome-header { text-align: center; padding: 2rem 5% 2rem; }
-    .welcome-header h1 { font-family: var(--font-serif); font-size: 4rem; color: var(--heading-color); margin: 0 0 0.5rem; }
-    .welcome-header .subtitle { font-family: var(--font-serif); font-size: 1.6rem; margin-top: 0; color: var(--text-color); opacity: 0.9; }
-    .welcome-text { max-width: 800px; margin: 2rem auto 0; text-align: left; font-size: 1.3em; line-height: 1.7; }
+    .teaser-header { text-align: center; padding-top: 10rem; padding-bottom: 4rem; }
+    .teaser-header h1 { font-size: 3.5rem; color: var(--heading-color); margin-bottom: 0.5rem; }
+    .teaser-header p { font-size: 1.5rem; }
 
-    .teaser-section { padding: 2rem 5% 2.5rem; }
-    .teaser-section h2 { text-align: center; font-size: 2.8rem; color: var(--heading-color); margin-bottom: 2.5rem; font-family: var(--font-serif); }
+    .teaser-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 5%; }
+    .teaser-placeholder { border: 1px dashed var(--glow-color); height: 300px; display: flex; justify-content: center; align-items: center; border-radius: 8px; }
 
-    .teaser-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; }
-    
-    .teaser-card { background: var(--card-background); border: 1px solid rgba(106, 159, 221, 0.2); border-radius: 8px; padding: 2rem; text-decoration: none; color: var(--text-color); transition: transform 0.3s, background 0.3s, box-shadow 0.3s; backdrop-filter: blur(5px); }
-    .teaser-card:hover { transform: translateY(-10px); background: rgba(32, 48, 65, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-    .teaser-card .icon { font-size: 2.8rem; display: block; margin-bottom: 1.2rem; }
-    .teaser-card h3 { font-size: 2rem; color: var(--heading-color); margin: 0 0 0.8rem 0; font-family: var(--font-serif); }
-    .teaser-card p { font-size: 1.1em; line-height: 1.6; margin: 0; }
-
-    .main-footer { text-align: center; padding: 2rem 5% 1.5rem; border-top: 1px solid rgba(106, 159, 221, 0.2); margin-top: 2rem; }
-    .main-footer a { color: var(--text-color); text-decoration: none; margin-right: 1rem; transition: color 0.3s; font-size: 1.1em; }
-    .main-footer a:hover { color: var(--heading-color); }
-    .main-footer p { font-size: 1em; }
-
-    /* Keyframes (unverändert) */
+    /* --- Keyframes (Wiederverwendet und Neu) --- */
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeOutFull { from { opacity: 1; } to { opacity: 0; pointer-events: none; } } /* pointer-events: none macht den Container "durchklickbar" */
     @keyframes flashInAndOut { 0% { opacity: 0; } 33% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
     @keyframes evolution-step { 0% { opacity: 0; } 25% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; } }
     @keyframes subtle-pulse { 0%, 100% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(0.95); box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); opacity: 0.8; } 50% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(1.05); box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.15); opacity: 1; } }

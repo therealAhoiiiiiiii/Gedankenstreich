@@ -1,14 +1,14 @@
 {
-  "name": "zany-zenith",
+  "name": "gedankenstreich",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5.13.7"
+    "astro": "^4.0.0"
   }
 }
