@@ -1,0 +1,31 @@
+---
+// src/components/Navigation.astro
+---
+<style>
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 1rem;
+        border-bottom: 2px solid #0056b3;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        margin: 0 1rem;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-links a:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+</style>
+<div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/gesamtwerk">Gesamtwerk</a>
+    <a href="/ueber-mich">Über Mich</a>
+    <a href="/kontakt">Kontakt</a>
+</div>

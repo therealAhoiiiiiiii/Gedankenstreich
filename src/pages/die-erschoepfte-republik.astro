@@ -1,0 +1,40 @@
+---
+import Navigation from '../components/Navigation.astro';
+const pageTitle = "Band I: Die erschöpfte Republik";
+const subtitle = "Synapsenflutattomant";
+---
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 2rem; background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .book-cover { width: 220px; height: auto; float: left; margin-right: 1.5rem; margin-bottom: 1rem; border-radius: 4px;}
+        .book-details h1 { margin-top: 0; color: #333; }
+        .book-details h2 { font-size: 1.5rem; color: #555; margin-top: -0.5rem; margin-bottom: 1.5rem; font-weight: normal; }
+        .book-details p { line-height: 1.6; }
+        .back-link { display: inline-block; margin-top: 2rem; text-decoration: none; color: #0056b3; font-weight: bold; }
+        .clearfix::after { content: ""; clear: both; display: table; }
+    </style>
+</head>
+<body>
+    <Navigation />
+    <main class="container">
+        <div class="book-details clearfix">
+            <img src="/cover-band-1.png" alt="Cover von {pageTitle}" class="book-cover">
+            <h1>{pageTitle}</h1>
+            <h2>{subtitle}</h2>
+            <p>
+                Hier kommt der Klappentext oder die Inhaltsangabe für dieses Buch hin.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+                Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+                sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
+                a, semper congue, euismod non, mi.
+            </p>
+        </div>
+        <a href="/gesamtwerk" class="back-link">&larr; Zurück zur Übersicht</a>
+    </main>
+</body>
+</html>
