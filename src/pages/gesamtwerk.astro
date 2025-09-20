@@ -1,6 +1,8 @@
-// FINALE, VOLLSTÄNDIGE & KORRIGIERTE VERSION (Build 2)
 ---
+// FINALE, VOLLSTÄNDIGE & KORRIGIERTE VERSION (Build 2)
 import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+---
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -97,25 +99,7 @@ import Navigation from '../components/Navigation.astro';
     </footer>
 
 <style>
-    :root {
-        --text-color: #c7d3e1;
-        --heading-color: #e6d8b9; 
-        --font-main: 'Segoe UI', 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
-        --font-serif: 'Lora', serif;
-        --background-color: #0A141D;
-        --link-hover-color: #d4a373;
-    }
-
-    body {
-        margin: 0;
-        font-family: var(--font-main);
-        color: var(--text-color);
-        background-color: var(--background-color);
-        background-image: url('/hintergrund.jpg');
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center center;
-    }
+    /* Local styles specific to Gesamtwerk page */
 
     .main-nav { 
         display: flex; 
