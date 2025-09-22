@@ -1,0 +1,66 @@
+/* Responsive hero/background utilities */
+
+/* overlay variable kept here because these rules are about the hero/background */
+:root{
+  --hero-overlay: linear-gradient(rgba(10,20,29,0.7), rgba(10,20,29,0.55));
+}
+
+/* Container that holds full-bleed background */
+.site-hero-bg {
+  position: relative;
+  min-height: 60vh; /* anpassen: Desktop-Hero-Größe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0A141D;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* fallback image (low-res) */
+  background-image: url('/images/bg-fallback.jpg');
+}
+
+/* Desktop: 16:9 hero artwork */
+@media (min-width: 900px) {
+  .site-hero-bg {
+    background-image: url('/images/bg-desktop.webp');
+    background-position: center center;
+  }
+}
+
+/* Mobile: narrower, evtl. anderes Motiv oder starker Crop */
+@media (max-width: 899px) {
+  .site-hero-bg {
+    background-image: url('/images/bg-mobile.webp');
+    background-position: center 20%;
+    min-height: 48vh;
+  }
+}
+
+/* Optional: use aspect-ratio queries when you want to target wide displays specifically */
+@media (min-aspect-ratio: 16/9) {
+  .site-hero-bg {
+    background-position: center 30%;
+  }
+}
+
+/* Overlay layer to improve contrast; works well mit .content-panel */
+.site-hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+/* Ensure content sits above overlay */
+.site-hero-bg > .hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hinweis: falls du Desktop-Preload möchtest, nutze <link rel=preload ...> in head */
