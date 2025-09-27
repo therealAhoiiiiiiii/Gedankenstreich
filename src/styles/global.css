@@ -1,0 +1,174 @@
+/* ===================================================================
+   Gedankenstreich - globale Styles
+   Vollständige Datei: src/styles/global.css
+   Hinweis: Hintergrundbild / Overlay in src/styles/background.css
+   =================================================================== */
+
+/* CSS-Reset / Grundlegendes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Designvariablen */
+:root {
+  --font-main: "Georgia", "Times New Roman", serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --heading-color: #dccaa8; /* helles Gold für Überschriften */
+  --text-color: #c7d3e1;    /* heller Text auf dunklem Hintergrund */
+  --accent-color: #d4a373;
+  --muted: #7b8084;
+  --container-max: 1200px;
+}
+
+/* Typografie (Basis) */
+body {
+  font-family: var(--font-sans);
+  color: var(--text-color);
+  line-height: 1.55;
+  font-size: 16px;
+  background-color: transparent; /* Hintergrund wird in background.css gesetzt */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  color: var(--heading-color);
+  margin: 0 0 0.8rem 0;
+}
+
+/* Link-Grundstil (global) */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  outline: none;
+}
+
+/* Zugängliche Fokus-Stile */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(212,163,115,0.9);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ===================================================================
+   Navigation / Header
+   Kompletter Nav‑Style — keine Unterstriche / Linien mehr
+   =================================================================== */
+
+/* Entfernt mögliche Linien/Schatten an der Nav */
+header .main-nav,
+header .main-nav::before,
+header .main-nav::after {
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+/* Hauptleiste */
+header .main-nav {
+  width: 100%;
+  left: 0;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 4%;
+  background: rgba(10, 20, 29, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* Logo / Link in der Nav */
+header .main-nav .nav-logo,
+header .main-nav .nav-logo:link,
+header .main-nav .nav-logo:visited {
+  font-family: var(--font-main);
+  color: var(--heading-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Links innerhalb der Nav */
+header .main-nav a {
+  text-decoration: none;
+  border-bottom: none;
+  box-shadow: none;
+  background-image: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 0.45rem 0.6rem;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+/* Hover / Active */
+header .main-nav a:hover {
+  color: var(--heading-color);
+  background: rgba(255,255,255,0.02);
+}
+
+/* Tastaturfokus (für Accessibility) */
+header .main-nav a:focus-visible {
+  outline: 3px solid rgba(212,163,115,0.9);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Responsive - kompakter auf kleinen Bildschirmen */
+@media (max-width: 700px) {
+  header .main-nav {
+    padding: 0.6rem 3%;
+  }
+  header .main-nav a {
+    font-size: 0.95rem;
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+/* ===================================================================
+   Weitere Hilfs-Container / Layout
+   =================================================================== */
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Karten / Panels (Beispiel) */
+.panel {
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  padding: 1.25rem;
+  color: var(--text-color);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Utility: transparent machen, falls ein Panel den Hintergrund überdeckt */
+.panel.transparent {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Fußnoten / kleine Schrift */
+.small {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ===================================================================
+   Ende Datei
+   =================================================================== */
