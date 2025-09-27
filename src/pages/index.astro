@@ -10,6 +10,9 @@
 </head>
 <body>
 
+    <!-- Persistenter Hintergrund, sichtbar auch nach Intro -->
+    <div class="site-background" aria-hidden="true"></div>
+
     <!-- Intro-Trailer (unverändert) -->
     <div id="intro-trailer">
         <main class="scene-container site-hero-bg">
@@ -150,6 +153,28 @@
         overflow: hidden;
     }
 
+    /* Persistenter Hintergrund (sichtbar nach Intro) */
+    .site-background {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        background-image: url('/hintergrund.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 400ms ease-in-out;
+    }
+
+    /* Wenn Intro aktiv soll die persistent background leicht gedimmt werden */
+    #intro-trailer + .site-background {
+        /* no-op: selector kept for clarity */
+    }
+
+    /* Stellt sicher, dass die scene-container nicht nochmal das Bild großflächig neu setzt */
+    .scene-container.site-hero-bg { background: transparent !important; }
+
     /* --- Intro-Trailer Logik (unverändert) --- */
     .scene-container { position: relative; width: 100vw; height: 100vh; background-size: cover; background-position: center center; }
     .main-header { position: absolute; top: 5%; left: 0; width: 100%; z-index: 10; text-align: center; }
@@ -179,8 +204,39 @@
     .glowing-core { position: absolute; top: 50%; left: 50%; transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)); z-index: 1; width: 180px; height: 180px; border-radius: 50%; background[...] 
 
     /* --- Hauptinhalt Logik (Skaliert auf 125%-Vision) --- */
-    #main-content { display: none; opacity: 0; }
+    #main-content { display: none; opacity: 0; position: relative; z-index: 1; }
     #main-content.fade-in { animation: fadeIn 0.5s ease-out forwards; }
-    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; lef[...] 
+    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; left: 0; z-index: 2; }
     .nav-logo { font-family: var(--font-main); font-size: 2em; color: var(--heading-color); text-decoration: none; font-weight: 600; }
     .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+    .main-nav li { margin-left: 2.5rem; }
+    .main-nav a { text-decoration: none; color: var(--text-color); font-size: 1.25em; transition: color 0.3s; }
+    .main-nav a:hover { color: var(--heading-color); }
+    
+    .welcome-header { text-align: center; padding: 2rem 5% 2rem; }
+    .welcome-header h1 { font-family: var(--font-serif); font-size: 4rem; color: var(--heading-color); margin: 0 0 0.5rem; }
+    .welcome-header .subtitle { font-family: var(--font-serif); font-size: 1.6rem; margin-top: 0; color: var(--text-color); opacity: 0.9; }
+    .welcome-text { max-width: 800px; margin: 2rem auto 0; text-align: left; font-size: 1.3em; line-height: 1.7; }
+
+    .teaser-section { padding: 2rem 5% 2.5rem; }
+    .teaser-section h2 { text-align: center; font-size: 2.8rem; color: var(--heading-color); margin-bottom: 2.5rem; font-family: var(--font-serif); }
+
+    .teaser-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; }
+    
+    .teaser-card { background: var(--card-background); border: 1px solid rgba(106, 159, 221, 0.2); border-radius: 8px; padding: 2rem; text-decoration: none; color: var(--text-color); transition: transform 180ms ease, background 180ms ease; }
+    .teaser-card:hover { transform: translateY(-10px); background: rgba(32, 48, 65, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .teaser-card .icon { font-size: 2.8rem; display: block; margin-bottom: 1.2rem; }
+    .teaser-card h3 { font-size: 2rem; color: var(--heading-color); margin: 0 0 0.8rem 0; font-family: var(--font-serif); }
+    .teaser-card p { font-size: 1.1em; line-height: 1.6; margin: 0; }
+
+    .main-footer { text-align: center; padding: 2rem 5% 1.5rem; border-top: 1px solid rgba(106, 159, 221, 0.2); margin-top: 2rem; }
+    .main-footer a { color: var(--text-color); text-decoration: none; margin-right: 1rem; transition: color 0.3s; font-size: 1.1em; }
+    .main-footer a:hover { color: var(--heading-color); }
+    .main-footer p { font-size: 1em; }
+
+    /* Keyframes (unverändert) */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes flashInAndOut { 0% { opacity: 0; } 33% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes evolution-step { 0% { opacity: 0; } 25% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes subtle-pulse { 0%, 100% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(0.95); box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); opacity: 0.8; } 50% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(1.05); box-shadow: 0 0 60px 28px rgba(106,159,221,0.12); opacity: 1; }}
+</style>
