@@ -1,0 +1,97 @@
+﻿---
+/*
+  SiteHeader.astro
+  - rendert Navigation und optional den Full‑Width Hero (Titel)
+  - props:
+    - heroText?: string | null  (wenn gesetzt: rendert den full-bleed Titel)
+*/
+const { heroText = null } = Astro.props;
+---
+<nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Gedankenstreich</a>
+    <ul class="nav-list" role="menubar" aria-label="Hauptnavigation Links">
+      <li role="none"><a role="menuitem" href="/gesamtwerk">Gesamtwerk</a></li>
+      <li role="none"><a role="menuitem" href="/offene-briefe">Offene Briefe</a></li>
+      <li role="none"><a role="menuitem" href="/making-of">Making of</a></li>
+      <li role="none"><a role="menuitem" href="/blog">Blog</a></li>
+      <li role="none"><a role="menuitem" href="/fruehwerk">Frühwerk</a></li>
+      <li role="none"><a role="menuitem" href="/kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+{heroText ? (
+  <header class="page-hero-standalone" role="banner" aria-label="Seiten-Titel">
+    <div class="hero-inner">
+      <h1>{heroText}</h1>
+    </div>
+  </header>
+) : null}
+
+<style>
+/* minimal: Navigation styles, erlaube page-specific overrides */
+:root {
+  --nav-height: 56px;
+  --nav-gap-links: 3rem;
+  --text-color: #c7d3e1;
+  --heading-color: #e6d8b9;
+  --font-main: 'Source Sans 3', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.main-nav {
+  background: rgba(10,20,29,0.92);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.nav-inner {
+  max-width: var(--container-max, 1800px);
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  padding: 0.6rem 6%;
+  height: var(--nav-height);
+}
+.nav-logo {
+  color: var(--text-color);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration:none;
+}
+.nav-list {
+  margin-left:auto;
+  display:flex;
+  gap: var(--nav-gap-links);
+  list-style:none;
+  padding:0;
+  align-items:center;
+}
+.nav-list a { color: var(--text-color); text-decoration:none; font-weight:600; padding:0.25rem 0.6rem; border-radius:4px; }
+.nav-list a:hover { color: var(--heading-color); background: rgba(255,255,255,0.02); }
+
+/* hero inside component: large, full-bleed by default */
+.page-hero-standalone {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: 3.2rem 8%;
+  background: linear-gradient(rgba(10,14,18,0.02), rgba(10,14,18,0.01));
+  backdrop-filter: blur(6px);
+}
+.page-hero-standalone .hero-inner { max-width: var(--container-max, 1800px); margin: 0 auto; }
+.page-hero-standalone h1 {
+  font-family: 'Lora', serif;
+  color: var(--heading-color);
+  margin: 0;
+  font-size: clamp(2.8rem, 6.6vw, 6rem);
+  line-height: 1.02;
+  font-weight:700;
+}
+</style>

@@ -1,0 +1,142 @@
+﻿/* styles/global.kombi.css
+   Aktualisiert: band-cover auf 380px, band-row--reverse spacing,
+   und Überschriften verwenden jetzt die Intro-Schrift (--font-main).
+*/
+
+:root {
+  /* Color / typography tokens */
+  --glow-color: rgba(106, 159, 221, 0.6);
+  --text-color: #c7d3e1;
+  --heading-color: #e6d8b9;
+  --background-color: #0A141D;
+  --card-background: rgba(22, 34, 47, 0.7);
+
+  /* Fonts */
+  --font-main: 'Source Sans 3', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Lora', serif;
+
+  /* Layout tokens */
+  --container-max: 1800px;
+  --nav-height: 56px;
+  --gap: 1.8rem;
+  --nav-gap-links: 3rem;
+
+  --panel-bg: rgba(10,14,18,0.06);
+  --panel-border: rgba(255,255,255,0.02);
+  --panel-shadow: 0 6px 20px rgba(0,0,0,0.22);
+
+  --accent-color: #d4a373;
+
+  --measure: 75ch;
+}
+
+/* Reset */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.5;
+}
+
+/* Shell / container */
+.layout-shell,
+.site-shell { padding-left: 8%; padding-right: 8%; padding-top: 1.2rem; padding-bottom: 1.2rem; }
+.container { max-width: var(--container-max); margin-left: auto; margin-right: auto; padding-left: 6%; padding-right: 6%; }
+
+/* Panels */
+.panel {
+  background: var(--panel-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  border-radius: 10px;
+  padding: 1.2rem;
+  color: var(--text-color);
+}
+
+/* Use intro/font-main for ALL headings to get the look you preferred */
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-main); /* Intro style applied site-wide */
+  color: var(--heading-color);
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+/* Full-bleed hero helper (centered) */
+.page-hero-standalone {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 2.4rem 6%;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(10,14,18,0.02), rgba(10,14,18,0.01));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.page-hero-standalone .hero-inner { max-width: var(--container-max); width:100%; margin: 0 auto; text-align:center; }
+.page-hero-standalone h1 { font-size: clamp(2rem, 4.2vw, 3.2rem); line-height:1.02; margin:0; font-weight:700; color:var(--heading-color); }
+
+/* Band scaling: larger covers to match wider layout (now 380px) */
+.band-row { display:flex; gap: var(--gap); align-items:center; }
+.band-cover { flex: 0 0 380px; max-width: 380px; border-radius: 8px; overflow:hidden; background: rgba(0,0,0,0.04); }
+.band-cover img { width:100%; height:100%; object-fit:cover; display:block; }
+.band-meta h3 { font-size: 1.9rem; margin: 0 0 0.6rem 0; }
+.band-teaser { font-size: 1.06rem; line-height: 1.6; max-width: var(--measure); }
+
+/* Make the whole band clickable */
+.band-link { display:block; color:inherit; text-decoration:none; margin-bottom: calc(var(--gap) / 2); }
+.band-link:hover .band { transform: translateY(-6px); box-shadow: 0 14px 34px rgba(0,0,0,0.28); }
+
+/* Fix for reversed rows: push the meta-column slightly toward the center */
+.band-row--reverse .band-meta {
+  /* When the cover is on the right, move the meta a bit right (towards center) */
+  padding-left: 2rem;
+  padding-right: 1rem;
+  /* ensure consistent text alignment */
+  text-align: left;
+}
+
+/* Default meta padding to keep spacing consistent */
+.band-meta { padding-left: 1rem; padding-right: 1rem; }
+
+/* Utility & responsive */
+.small { font-size: 0.95rem; }
+.bold { font-weight: 600; }
+
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 1200px) {
+  :root { --container-max: 1200px; }
+  .band-cover { flex: 0 0 340px; max-width: 340px; }
+  .band-meta h3 { font-size: 1.6rem; }
+}
+
+@media (max-width: 900px) {
+  .container { padding-left: 4%; padding-right: 4%; }
+  .panel { padding: 0.9rem; border-radius: 8px; backdrop-filter: blur(6px); }
+  .page-hero-standalone { margin-left: 0; width: auto; padding: 1.6rem 4%; border-radius: 8px; }
+  .band-row, .band-row--reverse { flex-direction: column; align-items: flex-start; }
+  .band-cover { width: 60%; max-width: 320px; flex: 0 0 auto; margin-bottom: 0.8rem; }
+  .band-meta { width: 100%; padding-left: 0; padding-right: 0; }
+}
+
+/* --- Specific override: ensure index page teaser heading and teaser card titles
+   use the intro/site font even if a page-level stylesheet sets a serif font.
+   We use higher priority (!) to override a later page-local rule without editing the page. */
+.teaser-section h2,
+.teaser-card h3 {
+  font-family: var(--font-main) !important;
+}

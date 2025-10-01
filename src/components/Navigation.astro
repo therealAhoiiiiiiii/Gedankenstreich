@@ -1,31 +1,100 @@
+﻿---
 ---
-// src/components/Navigation.astro
----
-<style>
-    .nav-links {
-        display: flex;
-        justify-content: center;
-        background-color: #333;
-        padding: 1rem;
-        border-bottom: 2px solid #0056b3;
+<nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Gedankenstreich</a>
+
+    <!-- nav-list als flexible Fläche: Items werden gleichmäßig verteilt -->
+    <ul class="nav-list" role="menubar" aria-label="Hauptnavigation Links">
+      <li role="none"><a role="menuitem" href="/gesamtwerk">Gesamtwerk</a></li>
+      <li role="none"><a role="menuitem" href="/offene-briefe">Offene Briefe</a></li>
+      <li role="none"><a role="menuitem" href="/making-of">Making of</a></li>
+      <li role="none"><a role="menuitem" href="/blog">Blog</a></li>
+      <li role="none"><a role="menuitem" href="/fruehwerk">Frühwerk</a></li>
+      <li role="none"><a role="menuitem" href="/kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+
+  <style>
+    :root{
+      --text-color: #c7d3e1;
+      --heading-color: #e6d8b9;
+      --container-max: 1800px;
+      --nav-height: 56px;
+      --nav-gap-links: 3rem;
+      --font-main: 'Source Sans 3', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      --nav-list-width: 68%; /* Breite der Nav-Itemsfläche - passt sich im Responsive an */
     }
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        margin: 0 1rem;
-        font-size: 1.1rem;
-        border-radius: 4px;
-        transition: background-color 0.3s, color 0.3s;
+
+    .main-nav {
+      background: rgba(10,20,29,0.92);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35) inset;
     }
-    .nav-links a:hover {
-        background-color: #0056b3;
-        color: white;
+
+    .nav-inner{
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 6%;
+      box-sizing: border-box;
+      height: var(--nav-height);
+      gap: 1rem;
     }
-</style>
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/gesamtwerk">Gesamtwerk</a>
-    <a href="/ueber-mich">Über Mich</a>
-    <a href="/kontakt">Kontakt</a>
-</div>
+
+    .nav-logo{
+      color: var(--text-color);
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-decoration: none;
+      opacity: 0.98;
+      display: inline-block;
+      flex: 0 0 auto;
+    }
+
+    /* WICHTIG: nav-list bekommt eine feste (relative) Breite und verteilt Items gleichmäßig */
+    .nav-list{
+      margin-left: auto;
+      display: flex;
+      list-style: none;
+      padding: 0;
+      align-items: center;
+      height: 100%;
+      width: var(--nav-list-width);
+      justify-content: space-between; /* verteilt die Zwischenräume gleichmäßig */
+    }
+    .nav-list li { margin: 0; flex: 0 0 auto; text-align: center; }
+    .nav-list a{
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 1.05rem;
+      display: inline-block;
+      line-height: 1;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .nav-list a:hover{
+      color: var(--heading-color);
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* responsive adjustments: nav-list becomes auto width on small viewports */
+    @media (max-width: 900px){
+      .nav-inner{ padding: 0.45rem 4%; }
+      .nav-list{ gap: 1.05rem; width: auto; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .nav-logo { font-size: 1.05rem; }
+      .nav-list a { font-size: 1rem; }
+    }
+  </style>
+</nav>

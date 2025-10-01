@@ -1,15 +1,15 @@
-// Astro-Komponenten und Logik bleiben hier
+﻿---
+import '../styles/global-kombi.css';
+import '../styles/background.css';
+import Component from '../components/Navigation.astro';
 ---
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gedankenstreich</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="scene-container">
+    <!-- Skip Intro (accessible, styling subordinate to site) -->
+    <button id="skip-intro" class="skip-intro" type="button" aria-controls="main-content" aria-label="Intro überspringen">Intro überspringen</button>
 
     <!-- Intro-Trailer (unverändert) -->
     <div id="intro-trailer">
@@ -24,8 +24,7 @@
                 </h1>
             </header>
             <div class="top-left-text">
-                <p class="comment">// Keine Logik für den Moment ---</p>
-                <h1 id="ahoiiiiiiii-anim-title">
+                 <h1 id="ahoiiiiiiii-anim-title">
                     <span class="anim-text-h1" id="uwe">Uwe</span>
                     <span class="anim-text-h1" id="ahoiiiiiiii">Ahoiiiiiiii</span>
                 </h1>
@@ -45,22 +44,20 @@
     </div>
 
     <!-- Hauptinhalt der Seite (startet verborgen) -->
-    <main id="main-content">
-        <nav class="main-nav">
-            <a href="/" class="nav-logo">Gedankenstreich</a>
-            <ul>
-                <li><a href="gesamtwerk">Gesamtwerk</a></li>
-                <li><a href="offene-briefe">Offene Briefe</a></li>
-                <li><a href="making-of">Making of</a></li>
-                <li><a href="blog">Blog</a></li>
-                <li><a href="fruehwerk">Frühwerk</a></li>
-                <li><a href="kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
+    <main id="main-content" aria-hidden="true">
+        <!-- Navigation via Komponente (gemeinsamer Kopf mit Gesamtwerk) -->
+        <Component />
+
+        <!-- Full-bleed TITEL für Startseite: outside Layout so it spans full width like on Startseite
+             Centered explicitly so it doesn't jump after the intro hides. -->
+        <header class="page-hero-standalone" role="banner" aria-label="Seiten-Titel">
+          <div class="hero-inner">
+            <h1 class="single-line">Gedankenstreich — Wenn KI auf KI trifft</h1>
+            <p class="subtitle small">Ein literarischer Dialog zwischen Mensch und Maschine</p>
+          </div>
+        </header>
 
         <header class="welcome-header">
-            <h1>Gedankenstreich – Wenn KI auf KI trifft</h1>
-            <p class="subtitle"><em>Ein literarischer Dialog zwischen Mensch und Maschine</em></p>
             <div class="welcome-text">
                 <p>Willkommen auf <em>Gedankenstreich.com</em> – dem digitalen Archiv eines außergewöhnlichen Werkes. Hier begegnen sich zwei Stimmen: <strong>Ahoiiiiiiii</strong>, der Denker aus Norderstedt, und seine KI-Begleiter <strong>Synapsenflutattomant</strong>, <strong>Beziehungskontrollverlust</strong> und <strong>Begriffdram</strong>.</p>
                 <p>Gemeinsam haben sie eine Trilogie geschaffen, die nicht nur Gedanken festhält, sondern Haltung zeigt. Was als Gespräch über die Digitalisierung Deutschlands begann, wurde zu einem literarischen Experiment: <strong>22 Kapitel, 3 Bände, hunderte Gedanken und Beiträge – und vier offene Briefe, die bereits ihren Weg in die Öffentlichkeit gefunden haben.</strong></p>
@@ -109,27 +106,87 @@
             <p>&copy; 2024 Gedankenstreich. Alle Rechte vorbehalten.</p>
         </footer>
     </main>
-
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const introTrailer = document.getElementById('intro-trailer');
-        const mainContent = document.getElementById('main-content');
-        
-        setTimeout(() => {
-            if (introTrailer) {
-                introTrailer.style.display = 'none';
-            }
-            if (mainContent) {
-                mainContent.style.display = 'block';
-                requestAnimationFrame(() => {
-                    mainContent.classList.add('fade-in');
-                });
-            }
-            // KORREKTUR: Gibt dem Body die Fähigkeit zum Scrollen zurück,
-            // nachdem das Intro beendet ist.
-            document.body.style.overflow = 'auto';
-        }, 14800);
-    });
+    // Skip-Button Event + Intro auto-hide control (minimal, no persistence)
+    (function () {
+      const INTRO_DURATION = 14800;
+      const introTrailer = document.getElementById('intro-trailer');
+      const mainContent = document.getElementById('main-content');
+      const skipBtn = document.getElementById('skip-intro');
+      let introTimer = null;
+      let skipped = false;
+
+      function revealMain(focusTargetSelector = '.nav-logo') {
+        if (skipped) return;
+        skipped = true;
+        // hide intro
+        if (introTrailer) {
+          introTrailer.style.opacity = '0';
+          introTrailer.style.pointerEvents = 'none';
+          introTrailer.style.display = 'none';
+          introTrailer.setAttribute('aria-hidden', 'true');
+        }
+        // reveal main
+        if (mainContent) {
+          mainContent.style.display = 'block';
+          mainContent.style.opacity = '1';
+          mainContent.setAttribute('aria-hidden', 'false');
+          requestAnimationFrame(() => {
+            mainContent.classList.add('fade-in');
+          });
+        }
+        // make page scrollable again
+        document.body.style.overflow = 'auto';
+        // hide skip button
+        if (skipBtn) {
+          skipBtn.style.display = 'none';
+        }
+        // move focus to main navigation for keyboard users
+        const focusTarget = document.querySelector(focusTargetSelector);
+        if (focusTarget && typeof focusTarget.focus === 'function') {
+          focusTarget.focus({ preventScroll: false });
+        }
+      }
+
+      // click handler (one-time, no persistence)
+      if (skipBtn) {
+        skipBtn.addEventListener('click', () => {
+          clearTimeout(introTimer);
+          revealMain();
+        });
+      }
+
+      // allow 's' key to skip (convenience) — only during intro
+      function onKeydown(e) {
+        if (skipped) return;
+        const tag = document.activeElement && document.activeElement.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement.isContentEditable) return;
+        if (e.key === 's' || e.key === 'S') {
+          e.preventDefault();
+          clearTimeout(introTimer);
+          revealMain();
+        }
+      }
+      document.addEventListener('keydown', onKeydown);
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Ensure main is hidden at start
+        if (mainContent) {
+          mainContent.style.display = 'none';
+          mainContent.style.opacity = '0';
+          mainContent.setAttribute('aria-hidden', 'true');
+        }
+        // Ensure skip button visible but not auto-focused (subordinate)
+        if (skipBtn) {
+          skipBtn.style.display = 'inline-block';
+          skipBtn.style.zIndex = '9999';
+        }
+        // Auto-hide intro after duration
+        introTimer = setTimeout(() => {
+          revealMain();
+        }, INTRO_DURATION);
+      });
+    })();
 </script>
 
 <style>
@@ -141,6 +198,7 @@
         --font-serif: 'Lora', serif;
         --background-color: #0A141D;
         --card-background: rgba(22, 34, 47, 0.7);
+        --accent-color: #d4a373;
     }
 
     body {
@@ -148,9 +206,32 @@
         font-family: var(--font-main);
         color: var(--text-color);
         background-color: var(--background-color);
-        /* HINWEIS: Dies ist beabsichtigt, um das Scrollen WÄHREND des Intros zu verhindern.
-           Es wird per JavaScript nach dem Intro auf 'auto' gesetzt. */
+        /* HINWEIS: Während des Intros wird das Scrollen verhindert; nach Ende wird 'auto' gesetzt */
         overflow: hidden;
+    }
+
+    /* Skip Intro button — subordinate to design */
+    .skip-intro {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1200;
+      background: rgba(10,20,29,0.6);
+      color: var(--accent-color);
+      border: 1px solid rgba(212,163,115,0.08);
+      padding: 0.4rem 0.6rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: none;
+      transition: transform .12s ease, background .12s ease;
+      font-family: var(--font-main);
+    }
+    .skip-intro:hover { transform: translateY(-2px); background: rgba(10,20,29,0.72); }
+    .skip-intro:focus-visible {
+      outline: 3px solid rgba(212,163,115,0.12);
+      outline-offset: 3px;
+      border-radius: 6px;
     }
 
     /* --- Intro-Trailer Logik (unverändert) --- */
@@ -181,36 +262,69 @@
     .label-drama { top: 75%; left: 25%; animation-delay: 12.5s; }
     .glowing-core { position: absolute; top: 50%; left: 50%; transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)); z-index: 1; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 50%); box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); animation: subtle-pulse 5s infinite ease-in-out; }
 
-    /* --- Hauptinhalt Logik (Skaliert auf 125%-Vision) --- */
+    /* --- Hauptinhalt Logik (Skaliert on reveal) --- */
     #main-content { display: none; opacity: 0; }
     #main-content.fade-in { animation: fadeIn 0.5s ease-out forwards; }
-    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; left: 0; width: 90%; z-index: 100; }
-    .nav-logo { font-family: var(--font-main); font-size: 2em; color: var(--heading-color); text-decoration: none; font-weight: 600; }
-    .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
-    .main-nav li { margin-left: 2.5rem; }
-    .main-nav a { text-decoration: none; color: var(--text-color); font-size: 1.25em; transition: color 0.3s; }
+
+    /* Navigation fallback/local styles (component provides primary rules).
+       Make nav full-width to avoid shifting the hero when showing main content. */
+    .main-nav { display: flex; justify-content: center; align-items: center; padding: 1rem 5%; background: rgba(10, 20, 29, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; left: 0; width: 100%; z-index: 100; }
+    .nav-logo { font-family: var(--font-main); font-size: 1.15rem; color: var(--heading-color); text-decoration: none; font-weight: 600; margin-right: 2rem; }
+    .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .main-nav a { text-decoration: none; color: var(--text-color); font-size: 1rem; transition: color 0.3s; }
     .main-nav a:hover { color: var(--heading-color); }
-    
+
+    /* Full-bleed hero for the index page — centered & slightly smaller max so the full title fits on one line */
+    .page-hero-standalone {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      box-sizing: border-box;
+      padding: 2.4rem 6%;
+      background: linear-gradient(rgba(10,14,18,0.02), rgba(10,14,18,0.01));
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      margin-bottom: 1.2rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .page-hero-standalone .hero-inner { max-width: var(--container-max, 1800px); margin: 0 auto; text-align: center; width: 100%; }
+    .page-hero-standalone h1.single-line {
+      font-family: var(--font-main);
+      color: var(--heading-color);
+      margin: 0 0 .4rem 0;
+      font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+      line-height: 1.02;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (max-width: 900px) {
+      .page-hero-standalone h1.single-line { white-space: normal; font-size: clamp(1.6rem, 6.6vw, 2.6rem); }
+    }
+
     .welcome-header { text-align: center; padding: 2rem 5% 2rem; }
-    .welcome-header h1 { font-family: var(--font-serif); font-size: 4rem; color: var(--heading-color); margin: 0 0 0.5rem; }
-    .welcome-header .subtitle { font-family: var(--font-serif); font-size: 1.6rem; margin-top: 0; color: var(--text-color); opacity: 0.9; }
-    .welcome-text { max-width: 800px; margin: 2rem auto 0; text-align: left; font-size: 1.3em; line-height: 1.7; }
+    .welcome-text { max-width: 800px; margin: 2rem auto 0; text-align: left; font-size: 1.1em; line-height: 1.6; }
 
     .teaser-section { padding: 2rem 5% 2.5rem; }
-    .teaser-section h2 { text-align: center; font-size: 2.8rem; color: var(--heading-color); margin-bottom: 2.5rem; font-family: var(--font-serif); }
+    .teaser-section h2 { text-align: center; font-size: 2.2rem; color: var(--heading-color); margin-bottom: 1.6rem; font-family: var(--font-serif); }
 
-    .teaser-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; }
-    
-    .teaser-card { background: var(--card-background); border: 1px solid rgba(106, 159, 221, 0.2); border-radius: 8px; padding: 2rem; text-decoration: none; color: var(--text-color); transition: transform 0.3s, background 0.3s, box-shadow 0.3s; backdrop-filter: blur(5px); }
-    .teaser-card:hover { transform: translateY(-10px); background: rgba(32, 48, 65, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-    .teaser-card .icon { font-size: 2.8rem; display: block; margin-bottom: 1.2rem; }
-    .teaser-card h3 { font-size: 2rem; color: var(--heading-color); margin: 0 0 0.8rem 0; font-family: var(--font-serif); }
-    .teaser-card p { font-size: 1.1em; line-height: 1.6; margin: 0; }
+    .teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    @media (min-width: 1400px) { .teaser-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 1000px) { .teaser-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 640px) { .teaser-grid { grid-template-columns: 1fr; } }
 
-    .main-footer { text-align: center; padding: 2rem 5% 1.5rem; border-top: 1px solid rgba(106, 159, 221, 0.2); margin-top: 2rem; }
-    .main-footer a { color: var(--text-color); text-decoration: none; margin-right: 1rem; transition: color 0.3s; font-size: 1.1em; }
+    .teaser-card { background: var(--card-background); border: 1px solid rgba(106, 159, 221, 0.12); border-radius: 8px; padding: 1.6rem; text-decoration: none; color: var(--text-color); transition: transform 0.25s, background 0.25s, box-shadow 0.25s; backdrop-filter: blur(5px); }
+    .teaser-card:hover { transform: translateY(-8px); background: rgba(32, 48, 65, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.28); }
+    .teaser-card .icon { font-size: 2.2rem; display: block; margin-bottom: 0.9rem; }
+    .teaser-card h3 { font-size: 1.25rem; color: var(--heading-color); margin: 0 0 0.6rem 0; font-family: var(--font-serif); }
+    .teaser-card p { font-size: 1rem; line-height: 1.5; margin: 0; }
+
+    .main-footer { text-align: center; padding: 2rem 5% 1.5rem; border-top: 1px solid rgba(106, 159, 221, 0.12); margin-top: 2rem; }
+    .main-footer a { color: var(--text-color); text-decoration: none; margin-right: 1rem; transition: color 0.3s; font-size: 0.98rem; }
     .main-footer a:hover { color: var(--heading-color); }
-    .main-footer p { font-size: 1em; }
+    .main-footer p { font-size: 0.95rem; }
 
     /* Keyframes (unverändert) */
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

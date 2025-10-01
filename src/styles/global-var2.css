@@ -1,7 +1,6 @@
-﻿/* styles/global.css
-   Global design tokens + panel rules aligned with index.astro appearance.
-   Key change: panels use a dark, very transparent tint (like the header/nav in index.astro)
-   so the site feels less "strict" and more connected to the background image.
+/* styles/global.var1.css
+   Variante 1 — Extra‑luftig (sehr geringe Panel‑Deckkraft, leichter Schatten)
+   Vollständige global.css, ready to replace styles/global.css for testing.
 */
 
 :root {
@@ -22,10 +21,10 @@
   --gap: 1.25rem;
   --nav-gap-links: 2.2rem;
 
-  /* Panel / card baseline — dark, ultra‑transparent tint (matches index.astro look) */
-  --panel-bg: rgba(10,14,18,0.06);    /* dark tint, very transparent */
-  --panel-border: rgba(255,255,255,0.02);
-  --panel-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  /* Panel / card baseline (Variante 1 — extra-luftig) */
+  --panel-bg: rgba(255,255,255,0.008);
+  --panel-border: rgba(255,255,255,0.015);
+  --panel-shadow: 0 6px 14px rgba(0,0,0,0.20);
 
   /* Accent */
   --accent-color: #d4a373;
@@ -63,30 +62,15 @@ body {
   padding-right: 5%;
 }
 
-/* Panels (dark tint, more blur like index.astro) */
+/* Panels (Variante 1: extra-luftig) */
 .panel {
   background: var(--panel-bg);
-  backdrop-filter: blur(10px);              /* stronger blur like in index.astro header */
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--panel-border);    /* subtle border */
-  box-shadow: var(--panel-shadow);          /* subtle external shadow */
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
   border-radius: 10px;
   padding: 1rem;
-  color: var(--text-color);
-}
-
-/* Utility modifiers */
-/* Narrower / more transparent panel for nav-like elements */
-.panel--narrow {
-  background: rgba(10,14,18,0.05);
-  padding: 0.6rem 0.9rem;
-  border-radius: 8px;
-}
-
-/* Slightly stronger panel for content where text contrast must be guaranteed */
-.panel--strong {
-  background: rgba(10,14,18,0.10);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.22);
 }
 
 /* Headings */
@@ -131,5 +115,4 @@ a:focus {
 @media (max-width: 800px) {
   .container { padding-left: 4%; padding-right: 4%; }
   .panel { padding: 0.8rem; border-radius: 8px; }
-  .panel--narrow { padding: 0.5rem 0.8rem; }
 }

@@ -1,7 +1,7 @@
-﻿/* styles/global.css
-   Global design tokens + panel rules aligned with index.astro appearance.
-   Key change: panels use a dark, very transparent tint (like the header/nav in index.astro)
-   so the site feels less "strict" and more connected to the background image.
+/* styles/global.var3.css
+   Variante 3 — Luftig mit Lesbarkeits‑Sicherung
+   Vollständige global.css, ready to replace styles/global.css for testing.
+   (Durchscheinend, aber mit subtiler innerer Overlay zur Sicherung des Textkontrasts)
 */
 
 :root {
@@ -22,10 +22,10 @@
   --gap: 1.25rem;
   --nav-gap-links: 2.2rem;
 
-  /* Panel / card baseline — dark, ultra‑transparent tint (matches index.astro look) */
-  --panel-bg: rgba(10,14,18,0.06);    /* dark tint, very transparent */
+  /* Panel / card baseline (Variante 3 — luftig + safety overlay) */
+  --panel-bg: rgba(255,255,255,0.012);
   --panel-border: rgba(255,255,255,0.02);
-  --panel-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  --panel-shadow: 0 5px 16px rgba(0,0,0,0.26);
 
   /* Accent */
   --accent-color: #d4a373;
@@ -63,30 +63,27 @@ body {
   padding-right: 5%;
 }
 
-/* Panels (dark tint, more blur like index.astro) */
+/* Panels (Variante 3: luftig + overlay for readability) */
 .panel {
+  position: relative;
   background: var(--panel-bg);
-  backdrop-filter: blur(10px);              /* stronger blur like in index.astro header */
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--panel-border);    /* subtle border */
-  box-shadow: var(--panel-shadow);          /* subtle external shadow */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
   border-radius: 10px;
   padding: 1rem;
-  color: var(--text-color);
+  overflow: visible;
 }
 
-/* Utility modifiers */
-/* Narrower / more transparent panel for nav-like elements */
-.panel--narrow {
-  background: rgba(10,14,18,0.05);
-  padding: 0.6rem 0.9rem;
-  border-radius: 8px;
-}
-
-/* Slightly stronger panel for content where text contrast must be guaranteed */
-.panel--strong {
-  background: rgba(10,14,18,0.10);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+/* subtle overlay behind content to keep text readable on busy backgrounds */
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(rgba(10,12,14,0.02), rgba(10,12,14,0.02));
+  border-radius: inherit;
 }
 
 /* Headings */
@@ -130,6 +127,5 @@ a:focus {
 /* Small responsive helpers */
 @media (max-width: 800px) {
   .container { padding-left: 4%; padding-right: 4%; }
-  .panel { padding: 0.8rem; border-radius: 8px; }
-  .panel--narrow { padding: 0.5rem 0.8rem; }
+  .panel { padding: 0.9rem; border-radius: 8px; }
 }
