@@ -1,0 +1,131 @@
+/* styles/global.var3.css
+   Variante 3 — Luftig mit Lesbarkeits‑Sicherung
+   Vollständige global.css, ready to replace styles/global.css for testing.
+   (Durchscheinend, aber mit subtiler innerer Overlay zur Sicherung des Textkontrasts)
+*/
+
+:root {
+  /* Color / typography tokens */
+  --glow-color: rgba(106, 159, 221, 0.6);
+  --text-color: #c7d3e1;
+  --heading-color: #e6d8b9;
+  --background-color: #0A141D;
+  --card-background: rgba(22, 34, 47, 0.7);
+
+  /* Fonts */
+  --font-main: 'Source Sans 3', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Lora', serif;
+
+  /* Layout tokens */
+  --container-max: 1200px;
+  --nav-height: 52px;
+  --gap: 1.25rem;
+  --nav-gap-links: 2.2rem;
+
+  /* Panel / card baseline (Variante 3 — luftig + safety overlay) */
+  --panel-bg: rgba(255,255,255,0.012);
+  --panel-border: rgba(255,255,255,0.02);
+  --panel-shadow: 0 5px 16px rgba(0,0,0,0.26);
+
+  /* Accent */
+  --accent-color: #d4a373;
+}
+
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.45;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Page container utility */
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Panels (Variante 3: luftig + overlay for readability) */
+.panel {
+  position: relative;
+  background: var(--panel-bg);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: visible;
+}
+
+/* subtle overlay behind content to keep text readable on busy backgrounds */
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(rgba(10,12,14,0.02), rgba(10,12,14,0.02));
+  border-radius: inherit;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-serif);
+}
+
+/* Utility text styles */
+.small { font-size: 0.9rem; }
+.bold { font-weight: 600; }
+
+/* Accessibility helper */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Simple responsive image behavior */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form & link basics */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 3px solid rgba(212,163,115,0.12);
+  outline-offset: 3px;
+}
+
+/* Small responsive helpers */
+@media (max-width: 800px) {
+  .container { padding-left: 4%; padding-right: 4%; }
+  .panel { padding: 0.9rem; border-radius: 8px; }
+}
