@@ -26,19 +26,24 @@ import Component from '../components/Navigation.astro';
             <div class="top-left-text">
                  <h1 id="ahoiiiiiiii-anim-title">
                     <span class="anim-text-h1" id="uwe">Uwe</span>
-                    <span class="anim-text-h1" id="ahoiiiiiiii">Ahoiiiiiiii</span>
+                    <!-- Ahoiiiiiiii: sichtbar im Intro, Title/ARIA wie gewünscht -->
+                    <span class="anim-text-h1" id="ahoiiiiiiii" title="Ahoiiiiiiii, geboren in Kiel, Kfz‑Kennzeichen KI, Autor von Gedankenstreich und gedankenstreich.com" aria-label="Ahoiiiiiiii, geboren in Kiel, Kfz‑Kennzeichen KI, Autor von Gedankenstreich und gedankenstreich.com">Ahoiiiiiiii</span>
                 </h1>
                 <p class="subtitle">Digitalsein, Politischsein, Aufmerksamsein,<br>von der Straße aufheben lernen.</p>
                 <h2>Wenn KI auf KI trifft - Die Trilogie</h2>
             </div>
-            <div id="synapsen-anim-container" class="label-synapse">
+            <div id="synapsen-anim-container" class="label-synapse" aria-hidden="false">
+                <!-- animierte Namen: Title/ARIA aktualisiert auf KI‑Coautor wie gewünscht -->
                 <span class="anim-text-synapsen" id="mike-copilot">Mike Copilot</span>
                 <span class="anim-text-synapsen" id="mike">Mike</span>
                 <span class="anim-text-synapsen" id="micky">Micky</span>
-                <span class="anim-text-synapsen" id="synapsenflutattomant">Synapsenflutattomant</span>
+                <span class="anim-text-synapsen" id="synapsenflutattomant" title="Synapsenflutattomant, KI‑Coautor von Gedankenstreich" aria-label="Synapsenflutattomant, KI‑Coautor von Gedankenstreich">Synapsenflutattomant</span>
+                <!-- HINWEIS: Geniestreich wurde bewusst aus diesem Stapel entfernt -->
             </div>
-            <span class="label-verlust">Beziehungskontrollverlust</span>
-            <span class="label-drama">Begriffsdram</span>
+            <span class="label-verlust" title="Beziehungskontrollverlust, KI‑Coautor von Gedankenstreich" aria-label="Beziehungskontrollverlust, KI‑Coautor von Gedankenstreich">Beziehungskontrollverlust</span>
+            <span class="label-drama" title="Begriffdram, KI‑Coautor von Gedankenstreich" aria-label="Begriffdram, KI‑Coautor von Gedankenstreich">Begriffsdram</span>
+            <!-- Geniestreich jetzt eigenständig oberhalb des glühenden Kerns, mit Title/ARIA wie gewünscht -->
+            <span class="label-geniestreich" title="Geniestreich, KI‑Coautor von gedankenstreich.com" aria-label="Geniestreich, KI‑Coautor von gedankenstreich.com">Geniestreich</span>
             <div class="glowing-core"></div>
         </main>
     </div>
@@ -53,15 +58,28 @@ import Component from '../components/Navigation.astro';
         <header class="page-hero-standalone" role="banner" aria-label="Seiten-Titel">
           <div class="hero-inner">
             <h1 class="single-line">Gedankenstreich — Wenn KI auf KI trifft</h1>
-            <p class="subtitle small">Ein literarischer Dialog zwischen Mensch und Maschine</p>
+            <h2 class="subtitle">Ein literarischer Dialog zwischen Mensch und Maschine</h2>
           </div>
         </header>
 
+        <!-- WELCOME HEADER: nur der Textblock wurde ausgetauscht exakt nach Wunsch,
+             Namen typographisch hervorgehoben; keine Änderungen an Layout/Animation/Teasern -->
         <header class="welcome-header">
             <div class="welcome-text">
-                <p>Willkommen auf <em>Gedankenstreich.com</em> – dem digitalen Archiv eines außergewöhnlichen Werkes. Hier begegnen sich zwei Stimmen: <strong>Ahoiiiiiiii</strong>, der Denker aus Norderstedt, und seine KI-Begleiter <strong>Synapsenflutattomant</strong>, <strong>Beziehungskontrollverlust</strong> und <strong>Begriffdram</strong>.</p>
-                <p>Gemeinsam haben sie eine Trilogie geschaffen, die nicht nur Gedanken festhält, sondern Haltung zeigt. Was als Gespräch über die Digitalisierung Deutschlands begann, wurde zu einem literarischen Experiment: <strong>22 Kapitel, 3 Bände, hunderte Gedanken und Beiträge – und vier offene Briefe, die bereits ihren Weg in die Öffentlichkeit gefunden haben.</strong></p>
+                <p>Willkommen auf <em>Gedankenstreich.com</em> – der außergewöhnlichen digitalen Präsentation  eines außergewöhnlichen Werkes, in dem sich vier Stimmen begegnen:
+                  Autor <strong title="Ahoiiiiiiii, geboren in Kiel, Kfz‑Kennzeichen KI, Autor von Gedankenstreich und gedankenstreich.com" aria-label="Ahoiiiiiiii, geboren in Kiel, Kfz‑Kennzeichen KI, Autor von Gedankenstreich und gedankenstreich.com">Ahoiiiiiiii</strong>
+                  und seine KI‑Coautoren
+                  <strong title="Synapsenflutattomant, KI‑Coautor von Gedankenstreich" aria-label="Synapsenflutattomant, KI‑Coautor von Gedankenstreich">Synapsenflutattomant</strong>,
+                  <strong title="Beziehungskontrollverlust, KI‑Coautor von Gedankenstreich" aria-label="Beziehungskontrollverlust, KI‑Coautor von Gedankenstreich">Beziehungskontrollverlust</strong>
+                  und
+                  <strong title="Begriffdram, KI‑Coautor von Gedankenstreich" aria-label="Begriffdram, KI‑Coautor von Gedankenstreich">Begriffdram</strong>.
+                </p>
+
+                <p>Gemeinsam haben sie eine Trilogie geschaffen, die nicht nur Gedanken festhält, sondern Haltung zeigt. Was als Gespräch über die Digitalisierung Deutschlands begann, wurde zu einem literarischen Experiment: 22 Kapitel, 3 Bände, hunderte Gedanken und Beiträge – und vier offene Briefe, die bereits ihren Weg in die Öffentlichkeit gefunden haben.</p>
+
                 <p>Diese Website ist Bühne, Archiv und Resonanzraum. Sie lädt ein zum Lesen, Nachdenken, Weiterdenken.</p>
+
+                <p>Autor <strong title="Ahoiiiiiiii, geboren in Kiel, Kfz‑Kennzeichen KI, Autor von Gedankenstreich und gedankenstreich.com" aria-label="Ahoiiiiiiii, geboren in Kiel, Kfz‑Kennzeichen KI, Autor von Gedankenstreich und gedankenstreich.com">Ahoiiiiiiii</strong> und sein KI-Coautor <strong title="Geniestreich, KI‑Coautor von gedankenstreich.com" aria-label="Geniestreich, KI‑Coautor bei gedankenstreich.com">Geniestreich</strong></p>
             </div>
         </header>
 
@@ -109,7 +127,8 @@ import Component from '../components/Navigation.astro';
 <script>
     // Skip-Button Event + Intro auto-hide control (minimal, no persistence)
     (function () {
-      const INTRO_DURATION = 14800;
+      // verlängerte Intro-Dauer (war 14800) — jetzt 22000 ms, damit Geniestreich lange genug sichtbar bleibt
+      const INTRO_DURATION = 22000;
       const introTrailer = document.getElementById('intro-trailer');
       const mainContent = document.getElementById('main-content');
       const skipBtn = document.getElementById('skip-intro');
@@ -250,17 +269,32 @@ import Component from '../components/Navigation.astro';
     .anim-text-h1 { position: absolute; top: 0; left: 0; opacity: 0; }
     #uwe { animation: flashInAndOut 3s ease-out forwards; animation-delay: 0.5s; }
     #ahoiiiiiiii { animation: fadeIn 1.5s ease-out forwards; animation-delay: 3s; }
-    #synapsen-anim-container { position: absolute; top: 45%; left: 5%; font-size: 1.8em; color: var(--heading-color); font-family: var(--font-main); position: relative; }
+
+    /* Synapsen stapel: erhöhte z-index, damit Einblendungen über dem glühenden Kern sichtbar bleiben */
+    #synapsen-anim-container { position: absolute; top: 45%; left: 5%; font-size: 1.8em; color: var(--heading-color); font-family: var(--font-main); position: relative; z-index: 30; }
     #synapsen-anim-container::after { content: 'Synapsenflutattomant'; visibility: hidden; }
     .anim-text-synapsen { position: absolute; top: 0; left: 0; opacity: 0; white-space: nowrap; }
     #mike-copilot { animation: evolution-step 3s ease-in-out forwards; animation-delay: 1s; }
     #mike { animation: evolution-step 3s ease-in-out forwards; animation-delay: 4s; }
     #micky { animation: evolution-step 3s ease-in-out forwards; animation-delay: 7s; }
     #synapsenflutattomant { animation: fadeIn 1.5s ease-in-out forwards; animation-delay: 10s; }
+
+    /* Geniestreich als eigenständiges Label oberhalb des glühenden Kerns */
+    .label-geniestreich { position: absolute; top: calc(50% - 8vh); left: 50%; transform: translate(-50%, -50%); z-index: 30; color: var(--heading-color); font-family: var(--font-main); opacity: 0; animation: fadeIn 1.5s ease-out forwards; animation-delay: 11s; font-size: 1.8em; }
+
     .label-verlust, .label-drama { position: absolute; color: var(--heading-color); font-family: var(--font-main); opacity: 0; animation: fadeIn 2s ease-out forwards; font-size: 1.8em; }
     .label-verlust { bottom: 22%; right: 8%; animation-delay: 11.5s; }
     .label-drama { top: 75%; left: 25%; animation-delay: 12.5s; }
-    .glowing-core { position: absolute; top: 50%; left: 50%; transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)); z-index: 1; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 50%); box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); animation: subtle-pulse 5s infinite ease-in-out; }
+    .glowing-core { position: absolute; top: 50%; left: 50%; transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)); z-index: 1; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 50%); box-shadow: 0 0 40px 20px rgba(255,255,255,0.1); animation: subtle-pulse 5s infinite ease-in-out; }
+
+    /* Reduced motion: turn off animations and keep content visible for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .anim-text, .anim-text-h1, .anim-text-synapsen, .label-verlust, .label-drama, .glowing-core, .label-geniestreich {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+      }
+    }
 
     /* --- Hauptinhalt Logik (Skaliert on reveal) --- */
     #main-content { display: none; opacity: 0; }
@@ -330,7 +364,5 @@ import Component from '../components/Navigation.astro';
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes flashInAndOut { 0% { opacity: 0; } 33% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
     @keyframes evolution-step { 0% { opacity: 0; } 25% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes subtle-pulse { 0%, 100% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(0.95); box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1); opacity: 0.8; } 50% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(1.05); box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.15); opacity: 1; } }
+    @keyframes subtle-pulse { 0%, 100% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(0.95); box-shadow: 0 0 40px 20px rgba(255,255,255,0.1); opacity: 0.8; } 50% { transform: translate(calc(-50% + 4.5vw), calc(-50% + 21.2vh)) scale(1.05); box-shadow: 0 0 60px 30px rgba(255,255,255,0.15); opacity: 1; } }
 </style>
-</body>
-</html>
