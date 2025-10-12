@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/background.css';
+import Navigation from '../components/Navigation.astro';
+
+// load Vorwort content
+const vorwortModules = import.meta.glob('./src/content/gesamtwerk/vorwort/*.{md,mdx,markdown}', { eager: true });
+const vorwortItems = Object.entries(vorwortModules).map(([path, mod]) => {
+  const file = path.split('/').pop();
+  const slug = file.replace(/\.(md|mdx|markdown)$/i, '');
+  const fm = mod.frontmatter ?? mod.meta?.frontmatter ?? mod.attributes ?? {};
+  return { slug, component: mod.default, frontmatter: fm };
+});
+vorwortItems.sort((a, b) => (a.frontmatter?.order ?? 999) - (b.frontmatter?.order ?? 999));
+const vorwortItem = vorwortItems.find(i => i.slug === 'vorwort') ?? vorwortItems[0];
+const VorwortComp = vorwortItem?.component;
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vorwort — Gedankenstreich</title>
+  </head>
+  <body>
+    <Navigation />
+
+    <header class="page-hero" style="background-image: url('/hintergrund.jpg'); background-size: cover; background-position: center;">
+      <div class="hero-inner">
+        <a href="/gesamtwerk" class="back-link">&larr; Gesamtwerk</a>
+        <h1>Vorwort</h1>
+      </div>
+    </header>
+
+    <Layout>
+      <main class="container">
+        <article class="content">
+          {VorwortComp ? (
+            <VorwortComp />
+          ) : (
+            <p>Vorwort wird gerade vorbereitet.</p>
+          )}
+        </article>
+      </main>
+    </Layout>
+  </body>
+
+  <style>
+    .page-hero { padding: 2.5rem 1.25rem; color: white; }
+    .hero-inner { max-width: 900px; margin: 0 auto; }
+    .back-link { color: inherit; display: inline-block; margin-bottom: 0.6rem; text-decoration: none; }
+    .content { max-width: 68ch; margin: 1.25rem auto; }
+  </style>
+</html>
