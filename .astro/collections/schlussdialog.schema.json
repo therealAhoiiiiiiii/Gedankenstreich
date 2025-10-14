@@ -1,0 +1,21 @@
+{
+  "$ref": "#/definitions/schlussdialog",
+  "definitions": {
+    "schlussdialog": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "draft": {
+          "type": "boolean"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

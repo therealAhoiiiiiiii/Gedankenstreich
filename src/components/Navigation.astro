@@ -4,13 +4,118 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo">Gedankenstreich</a>
 
-    <!-- nav-list als flexible Fläche: Items werden gleichmäßig verteilt -->
+    <!-- nav-list als flexible Fläche: Items werden linksbündig und einzeilig -->
     <ul class="nav-list" role="menubar" aria-label="Hauptnavigation Links">
-      <li role="none"><a role="menuitem" href="/gesamtwerk">Gesamtwerk</a></li>
-      <li role="none"><a role="menuitem" href="/offene-briefe">Offene Briefe</a></li>
+      <li role="none">
+        <details class="nav-details" role="presentation" aria-haspopup="true">
+          <summary class="nav-summary" role="menuitem" aria-expanded="false" aria-controls="gesamtwerk-submenu" tabindex="0">
+            Gesamtwerk
+          </summary>
+
+          <ul id="gesamtwerk-submenu" class="nav-sublist" role="menu" aria-label="Gesamtwerk Untermenü">
+            <li role="none">
+              <a role="menuitem" href="/gesamtwerk" class="nav-sublink nav-sublink--overview" id="gesamtwerk-overview">
+                Gesamtwerk — Übersicht
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/die-erschoepfte-republik" class="nav-sublink" id="band-i-link">
+                Band I — Die erschöpfte Republik
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/mensch-und-computer" class="nav-sublink" id="band-ii-link">
+                Band II — Mensch &amp; Computer
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/loslassen-und-neuwagen" class="nav-sublink" id="band-iii-link">
+                Band III — Loslassen &amp; Neuwagen
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+
+      <li role="none">
+        <details class="nav-details" role="presentation" aria-haspopup="true">
+          <summary class="nav-summary" role="menuitem" aria-expanded="false" aria-controls="offene-briefe-submenu" tabindex="0">
+            Offene Briefe
+          </summary>
+
+          <ul id="offene-briefe-submenu" class="nav-sublist" role="menu" aria-label="Offene Briefe Untermenü">
+            <li role="none">
+              <a role="menuitem" href="/offene-briefe" class="nav-sublink nav-sublink--overview" id="offene-briefe-overview">
+                Offene Briefe — Übersicht
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/offene-briefe/offener-brief-zur-sozialen-verantwortung" class="nav-sublink" id="ob-soziale-verantwortung">
+                Offener Brief zur sozialen Verantwortung
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/offene-briefe/der-rechtsruck-ist-kein-naturereignis" class="nav-sublink" id="ob-rechtsruck">
+                Der Rechtsruck ist kein Naturereignis
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/offene-briefe/unternehmen-sind-soziale-raeume" class="nav-sublink" id="ob-unternehmen">
+                Unternehmen sind soziale Räume
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/offene-briefe/buergergeld-neq-sozialstaat" class="nav-sublink" id="ob-buergergeld">
+                Bürgergeld ≠ Sozialstaat
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+
+      <li role="none">
+        <details class="nav-details" role="presentation" aria-haspopup="true">
+          <summary class="nav-summary" role="menuitem" aria-expanded="false" aria-controls="fruehwerk-submenu" tabindex="0">
+            Frühwerk
+          </summary>
+
+          <ul id="fruehwerk-submenu" class="nav-sublist" role="menu" aria-label="Frühwerk Untermenü">
+            <li role="none">
+              <a role="menuitem" href="/fruehwerk" class="nav-sublink nav-sublink--overview" id="fruehwerk-overview">
+                Frühwerk — Übersicht
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/fruehwerk/wie-ich-die-welt-digitalisieren-wollte" class="nav-sublink" id="fw-digitalisieren">
+                Wie ich die Welt digitalisieren wollte
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/fruehwerk/ambienTV-home" class="nav-sublink" id="fw-ambienTV-home">
+                @mbienTV Home
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/fruehwerk/ambienTV-friseur" class="nav-sublink" id="fw-ambienTV-friseur">
+                @mbienTV Friseur
+              </a>
+            </li>
+           <li role="none">
+              <a role="menuitem" href="/fruehwerk/ambienTV-boutique" class="nav-sublink" id="fw-ambienTV-boutique">
+                @mbienTV Boutique
+              </a>
+            </li>
+           <li role="none">
+              <a role="menuitem" href="/fruehwerk/ambienTV-smart-shopping" class="nav-sublink" id="fw-ambienTV-smart-shopping">
+                @mbienTV smart Shopping
+              </a>
+            </li>
+         </ul>
+        </details>
+      </li>
+
       <li role="none"><a role="menuitem" href="/making-of">Making of</a></li>
       <li role="none"><a role="menuitem" href="/blog">Blog</a></li>
-      <li role="none"><a role="menuitem" href="/fruehwerk">Frühwerk</a></li>
       <li role="none"><a role="menuitem" href="/kontakt">Kontakt</a></li>
     </ul>
   </div>
@@ -21,9 +126,9 @@
       --heading-color: #e6d8b9;
       --container-max: 1800px;
       --nav-height: 56px;
-      --nav-gap-links: 3rem;
+      --nav-gap-links: 1.6rem;
       --font-main: 'Source Sans 3', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-      --nav-list-width: 68%; /* Breite der Nav-Itemsfläche - passt sich im Responsive an */
+      --nav-list-max-width: 900px;
     }
 
     .main-nav {
@@ -33,7 +138,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 999;
+      z-index: 9999; /* deutlich hoch setzen, damit Menü über dem Hero liegt */
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.35) inset;
@@ -48,6 +153,7 @@
       box-sizing: border-box;
       height: var(--nav-height);
       gap: 1rem;
+      overflow: visible; /* wichtig: nicht clipping */
     }
 
     .nav-logo{
@@ -61,7 +167,8 @@
       flex: 0 0 auto;
     }
 
-    /* WICHTIG: nav-list bekommt eine feste (relative) Breite und verteilt Items gleichmäßig */
+    /* nav-list: left-aligned, single line, controlled gap
+       NOTE: overflow visible so that absolute submenu is not clipped */
     .nav-list{
       margin-left: auto;
       display: flex;
@@ -69,10 +176,13 @@
       padding: 0;
       align-items: center;
       height: 100%;
-      width: var(--nav-list-width);
-      justify-content: space-between; /* verteilt die Zwischenräume gleichmäßig */
+      max-width: var(--nav-list-max-width);
+      justify-content: flex-start; /* left aligned */
+      gap: var(--nav-gap-links);
+      flex-wrap: nowrap;
+      overflow: visible; /* <-- wichtig (vorher war hidden) */
     }
-    .nav-list li { margin: 0; flex: 0 0 auto; text-align: center; }
+    .nav-list li { margin: 0; flex: 0 0 auto; text-align: left; }
     .nav-list a{
       color: var(--text-color);
       text-decoration: none;
@@ -83,18 +193,226 @@
       line-height: 1;
       font-weight: 600;
       white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 18rem;
     }
     .nav-list a:hover{
       color: var(--heading-color);
       background: rgba(255,255,255,0.02);
     }
 
-    /* responsive adjustments: nav-list becomes auto width on small viewports */
-    @media (max-width: 900px){
-      .nav-inner{ padding: 0.45rem 4%; }
-      .nav-list{ gap: 1.05rem; width: auto; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-      .nav-logo { font-size: 1.05rem; }
-      .nav-list a { font-size: 1rem; }
+    .nav-details {
+      position: relative;
+      display: inline-block;
+      /* ensure it does not clip children */
+      overflow: visible;
     }
+    .nav-summary {
+      list-style: none;
+      cursor: pointer;
+      color: var(--text-color);
+      background: none;
+      border: none;
+      padding: 0.25rem 0.6rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .nav-summary:hover,
+    .nav-summary:focus {
+      color: var(--heading-color);
+      background: rgba(255,255,255,0.02);
+      outline: none;
+    }
+    .nav-details[open] .nav-summary { color: var(--heading-color); }
+
+    /* Submenu sits slightly overlapping the summary to avoid a gap during mouse move */
+    .nav-sublist {
+      position: absolute;
+      top: calc(var(--nav-height) - 4px); /* overlap by 4px to prevent gap */
+      left: 0;
+      background: rgba(8,12,18,0.98);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      list-style: none;
+      min-width: 260px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      transform-origin: top left;
+      z-index: 100000; /* hoch, damit es immer über Content liegt */
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .12s ease, visibility .12s ease, transform .12s ease;
+      transform: translateY(0); /* no downward gap */
+      text-align: left;
+      pointer-events: none; /* default hidden should not receive pointer events */
+    }
+
+    /* show submenu when details is open (keyboard/click) or on hover/focus */
+    .nav-details[open] > .nav-sublist,
+    .nav-details:hover > .nav-sublist,
+    .nav-details:focus-within > .nav-sublist,
+    .nav-details.open > .nav-sublist,
+    .nav-details.hover-open > .nav-sublist {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .nav-sublist a {
+      display: block;
+      padding: 0.4rem 0.6rem;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 34rem;
+      text-align: left;
+    }
+    .nav-sublist a:hover, .nav-sublist a:focus {
+      background: rgba(255,255,255,0.02);
+      color: var(--heading-color);
+      outline: none;
+    }
+
+    @media (max-width: 900px) {
+      .nav-inner{ padding: 0.45rem 4%; }
+      .nav-list{ gap: 1.05rem; max-width: none; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .nav-logo { font-size: 1.05rem; }
+      .nav-list a { font-size: 1rem; max-width: 12rem; }
+
+      .nav-sublist {
+        position: static;
+        transform: none;
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        min-width: auto;
+        gap: 0;
+        pointer-events: auto;
+      }
+      .nav-sublist a { padding: 0 0.25rem; font-size: 0.98rem; white-space: nowrap; }
+    }
+
+    .nav-details summary::-webkit-details-marker { display: none; }
+    .nav-summary:focus { outline: 2px solid rgba(230,216,185,0.12); outline-offset: 2px; }
+    .nav-sublist a:focus { outline: 2px solid rgba(230,216,185,0.14); outline-offset: 2px; }
   </style>
+
+  <script>
+    (function () {
+      if (typeof window === 'undefined') return;
+
+      // small delay used when closing on mouseleave — increase so user can move into submenu
+      const HOVER_CLOSE_DELAY = 250;
+
+      /** @type {HTMLDetailsElement[]} */
+      const detailsList = Array.from(document.querySelectorAll('.nav-details')).filter(el => el instanceof HTMLDetailsElement);
+
+      detailsList.forEach(details => {
+        /** @type {HTMLElement | null} */
+        const summary = details.querySelector('.nav-summary');
+        /** @type {HTMLElement | null} */
+        const submenu = details.querySelector('.nav-sublist');
+
+        if (!summary) return;
+
+        // initialize aria
+        summary.setAttribute('aria-expanded', details.open ? 'true' : 'false');
+
+        let hoverTimeout = /** @type {number | null} */ (null);
+
+        const clearHoverTimeout = () => {
+          if (hoverTimeout) { clearTimeout(hoverTimeout); hoverTimeout = null; }
+        };
+
+        const setOpenState = (open) => {
+          clearHoverTimeout();
+          try { details.open = !!open; } catch (e) {}
+          if (open) {
+            details.classList.add('open');
+            details.classList.add('hover-open');
+            summary.setAttribute('aria-expanded', 'true');
+          } else {
+            details.classList.remove('open');
+            details.classList.remove('hover-open');
+            summary.setAttribute('aria-expanded', 'false');
+          }
+        };
+
+        // native toggle -> sync classes/aria
+        details.addEventListener('toggle', () => {
+          summary.setAttribute('aria-expanded', details.open ? 'true' : 'false');
+          if (details.open) {
+            details.classList.add('open');
+          } else {
+            details.classList.remove('open');
+            details.classList.remove('hover-open');
+          }
+        });
+
+        // keyboard handling: arrow down focuses first item, escape closes
+        summary.addEventListener('keydown', /** @param {KeyboardEvent} ev */ (ev) => {
+          if (ev.key === 'ArrowDown') {
+            ev.preventDefault();
+            const first = submenu && submenu.querySelector('a');
+            if (first) {
+              setOpenState(true);
+              (first).focus();
+            }
+          } else if (ev.key === 'Escape') {
+            setOpenState(false);
+            summary.blur();
+          }
+          // allow native Enter/Space toggle
+        });
+
+        // mouseenter/mouseleave on details and summary and submenu to robustly keep menu open
+        const enterHandler = /** @param {MouseEvent} _ev */ (_ev) => {
+          clearHoverTimeout();
+          setOpenState(true);
+        };
+        const leaveHandler = /** @param {MouseEvent} _ev */ (_ev) => {
+          clearHoverTimeout();
+          hoverTimeout = window.setTimeout(() => setOpenState(false), HOVER_CLOSE_DELAY);
+        };
+
+        details.addEventListener('mouseenter', enterHandler);
+        details.addEventListener('mouseleave', leaveHandler);
+        summary.addEventListener('mouseenter', enterHandler);
+        summary.addEventListener('mouseleave', leaveHandler);
+
+        if (submenu) {
+          submenu.addEventListener('mouseenter', enterHandler);
+          submenu.addEventListener('mouseleave', leaveHandler);
+        }
+
+        // focusout: close if focus leaves the details area
+        details.addEventListener('focusout', /** @param {FocusEvent} ev */ (ev) => {
+          const related = /** @type {Element | null} */ (ev.relatedTarget);
+          if (!related || !details.contains(related)) {
+            setOpenState(false);
+          }
+        });
+
+        // global Escape handler to close menu
+        document.addEventListener('keydown', /** @param {KeyboardEvent} ev */ (ev) => {
+          if (ev.key === 'Escape') {
+            setOpenState(false);
+          }
+        });
+      });
+    })();
+  </script>
 </nav>

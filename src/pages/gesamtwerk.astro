@@ -2,6 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/background.css';
 import Navigation from '../components/Navigation.astro';
+
+// Lade Vorwort-Kapitel (Markdown/MDX) unter src/content/gesamtwerk/vorwort
+const vorwortModules = import.meta.glob('./src/content/gesamtwerk/vorwort/*.{md,mdx,markdown}', { eager: true });
+const vorwortItems = Object.entries(vorwortModules).map(([path, mod]) => {
+  const file = path.split('/').pop();
+  const slug = file.replace(/\.(md|mdx|markdown)$/i, '');
+  const fm = mod.frontmatter ?? mod.meta?.frontmatter ?? mod.attributes ?? {};
+  return { slug, component: mod.default, frontmatter: fm };
+});
+vorwortItems.sort((a, b) => (a.frontmatter?.order ?? 999) - (b.frontmatter?.order ?? 999));
+const vorwortItem = vorwortItems.find(i => i.slug === 'vorwort') ?? vorwortItems[0];
+const VorwortComp = vorwortItem?.component;
+
+// Lade Schlussdialog-Kapitel (Markdown/MDX) unter src/content/gesamtwerk/schlussdialog
+const schlussModules = import.meta.glob('./src/content/gesamtwerk/schlussdialog/*.{md,mdx,markdown}', { eager: true });
+const schlussItems = Object.entries(schlussModules).map(([path, mod]) => {
+  const file = path.split('/').pop();
+  const slug = file.replace(/\.(md|mdx|markdown)$/i, '');
+  const fm = mod.frontmatter ?? mod.meta?.frontmatter ?? mod.attributes ?? {};
+  return { slug, component: mod.default, frontmatter: fm };
+});
+schlussItems.sort((a, b) => (a.frontmatter?.order ?? 999) - (b.frontmatter?.order ?? 999));
+const schlussItem = schlussItems[0];
+const SchlussComp = schlussItem?.component;
 ---
 <html lang="de">
 <head>
@@ -20,19 +44,43 @@ import Navigation from '../components/Navigation.astro';
     <main class="container page-geschosswerk page-gesamtwerk" role="main" aria-label="Gesamtwerk">
          <section class="hero panel panel--strong" aria-labelledby="gesamtwerk-intro">
 
-            <!-- Vorwort: bleibt direkt unter dem Titel -->
+            <!-- Vorwort: einklappbar; summary fungiert als Link/Teaser -->
             <div class="hero-foreword" role="region" aria-label="Vorwort">
-              <a href="/vorwort" class="foreword-link" aria-label="Zum Vorwort: KI und KI im Dialog">
-                <h4 class="foreword-title">Vorwort</h4>
-                <div class="foreword-teaser">
-                  <h3><em>KI und KI im Dialog –</em></h3>
-                  <h3><em>Eine Anleitung zum Digitalsein, Politischsein, Aufmerksamsein,</em></h3>
-                  <h3><em>von der Straße aufheben lernen.</em></h3>
-                </div>
-              </a>
+              {VorwortComp ? (
+                <details class="vorwort-details" data-slug={vorwortItem?.slug ?? ''}>
+                  <summary class="foreword-link" aria-haspopup="true" aria-controls="vorwort-content" aria-expanded="false">
+                    <h4 class="foreword-title">Vorwort</h4>
+                    <div class="foreword-teaser">
+                      <h3><em>KI und KI im Dialog –</em></h3>
+                      <h3><em>Eine Anleitung zum Digitalsein, Politischsein, Aufmerksamsein,</em></h3>
+                      <h3><em>von der Straße aufheben lernen.</em></h3>
+                    </div>
+                  </summary>
+
+                  <article id="vorwort-content" class="vorwort-content" aria-labelledby="vorwort-heading">
+                    <h2 id="vorwort-heading" class="visually-hidden">
+                      {vorwortItem?.frontmatter?.title ?? 'Vorwort'}
+                    </h2>
+                    <!-- INLINE: render server-side so the content can be expanded immediately on the Gesamtwerk page -->
+                    <VorwortComp />
+                    <div class="vorwort-actions">
+                      <a class="vorwort-full-link" href="/vorwort">Vollständiges Vorwort-Seite öffnen</a>
+                    </div>
+                  </article>
+                </details>
+              ) : (
+                <a href="/vorwort" class="foreword-link" aria-label="Zum Vorwort: KI und KI im Dialog">
+                  <h4 class="foreword-title">Vorwort</h4>
+                  <div class="foreword-teaser">
+                    <h3><em>KI und KI im Dialog –</em></h3>
+                    <h3><em>Eine Anleitung zum Digitalsein, Politischsein, Aufmerksamsein,</em></h3>
+                    <h3><em>von der Straße aufheben lernen.</em></h3>
+                  </div>
+                </a>
+              )}
             </div>
 
-            <!-- Zweispaltige Sektion: links das Zitat, rechts die Widmung, getrennt durch eine helle senkrechte Linie -->
+            <!-- Zweispaltige Sektion: links das Zitat, rechts die Widmung -->
             <div class="hero-quote-dedication" role="region" aria-label="Zitat und Widmung">
               <div class="quote-block" aria-labelledby="quote-heading">
                 <h4 id="quote-heading">Zitat</h4>
@@ -56,7 +104,7 @@ import Navigation from '../components/Navigation.astro';
             <p class="bold">Die Trilogie versammelt die Gespräche, Notate und offenen Briefe,</p>
             <p class="bold">die im Wechselspiel zwischen dem Autor und seinen Coautoren entstanden sind.</p>
             <p class="bold">Hier findest du die drei Bände in Übersicht, </p>
-            <p class="bold">Dkurze Einordnungen und Direktlinks zu den einzelnen Bandseiten.</p>
+            <p class="bold">kurze Einordnungen und Direktlinks zu den einzelnen Bandseiten.</p>
         </section>
 
         <section class="works-list" aria-labelledby="works-heading">
@@ -104,6 +152,46 @@ import Navigation from '../components/Navigation.astro';
         </a>
       </section>
 
+      <!-- Schlussdialog-Teaser: jetzt zwischen Band III und Copyright -->
+      <section class="closing-section" aria-labelledby="closing-heading">
+        <h2 id="closing-heading" class="visually-hidden">Schlussdialog</h2>
+
+        <div class="hero-closing" role="region" aria-label="Schlussdialog" style="margin-top:1rem;">
+          {SchlussComp ? (
+            <details class="schluss-details" data-slug={schlussItem?.slug ?? ''}>
+              <summary class="closing-link" aria-haspopup="true" aria-controls="schluss-content" aria-expanded="false">
+                <h4 class="closing-title">Schlussdialog</h4>
+                <div class="closing-teaser">
+                  <h3><em>Ein letztes Gespräch —</em></h3>
+                  <h3><em>Zwischen Resümee, Ausblick und offenen Fragen.</em></h3>
+                  <p class="closing-intro">Hier beginnt das Nachwort: ein Gespräch über das, was bleibt — kurze Einordnung und letzte Gedanken.</p>
+                </div>
+              </summary>
+
+              <article id="schluss-content" class="schluss-content" aria-labelledby="schluss-heading">
+                <h2 id="schluss-heading" class="visually-hidden">
+                  {schlussItem?.frontmatter?.title ?? 'Schlussdialog'}
+                </h2>
+                <!-- INLINE: render server-side so the content can be expanded immediately on the Gesamtwerk page -->
+                <SchlussComp />
+                <div class="schluss-actions">
+                  <a class="schluss-full-link" href="/schlussdialog">Vollständigen Schlussdialog öffnen</a>
+                </div>
+              </article>
+            </details>
+          ) : (
+            <a href="/schlussdialog" class="closing-link" aria-label="Zum Schlussdialog">
+              <h4 class="closing-title">Schlussdialog</h4>
+              <div class="closing-teaser">
+                <h3><em>Ein letztes Gespräch —</em></h3>
+                <h3><em>Zwischen Resümee, Ausblick und offenen Fragen.</em></h3>
+                <p class="closing-intro">Hier beginnt das Nachwort: ein Gespräch über das, was bleibt — kurze Einordnung und letzte Gedanken.</p>
+              </div>
+            </a>
+          )}
+        </div>
+      </section>
+
       <footer class="panel small" style="text-align:center;">
         <p>© 2025 Gedankenstreich</p>
       </footer>
@@ -138,9 +226,33 @@ import Navigation from '../components/Navigation.astro';
 
   /* Vorwort (unter Titel) */
   .hero-foreword { width: 100%; margin-bottom: 1rem; text-align: center; }
-  .foreword-link { text-decoration: none; color: inherit; display: inline-block; }
+  .foreword-link { text-decoration: none; color: inherit; display: inline-block; cursor: pointer; }
   .foreword-title { margin: 0 0 0.35rem 0; font-weight: 700; }
   .foreword-teaser h3 { margin: 0; font-weight: 400; font-size: 1rem; opacity: .95; }
+
+  /* Style für details/summary als Teaser (Vorwort) */
+  .vorwort-details { border: none; background: transparent; padding: 0; margin: 0; text-align: center; }
+  .vorwort-details summary { list-style: none; outline: none; -webkit-user-select: none; user-select: none; }
+  .vorwort-details summary::-webkit-details-marker { display: none; }
+  .vorwort-details summary:focus { outline: 2px solid rgba(0,0,0,0.12); outline-offset: 2px; }
+  .vorwort-content { max-width: 68ch; margin: 0.75rem auto 1rem; text-align: left; }
+  .vorwort-actions { margin-top: 0.75rem; text-align: right; }
+  .vorwort-full-link { font-size: 0.95rem; color: inherit; text-decoration: underline; }
+
+  /* Schlussdialog Teaser / details */
+  .hero-closing { width: 100%; margin-bottom: 1rem; text-align: center; }
+  .closing-link { text-decoration: none; color: inherit; display: inline-block; cursor: pointer; }
+  .closing-title { margin: 0 0 0.35rem 0; font-weight: 700; }
+  .closing-teaser h3 { margin: 0; font-weight: 400; font-size: 1rem; opacity: .95; }
+  .closing-intro { margin: .35rem 0 0; opacity: 0.9; font-size: .95rem; }
+
+  .schluss-details { border: none; background: transparent; padding: 0; margin: 0; text-align: center; }
+  .schluss-details summary { list-style: none; outline: none; -webkit-user-select: none; user-select: none; }
+  .schluss-details summary::-webkit-details-marker { display: none; }
+  .schluss-details summary:focus { outline: 2px solid rgba(0,0,0,0.12); outline-offset: 2px; }
+  .schluss-content { max-width: 68ch; margin: 0.75rem auto 1rem; text-align: left; }
+  .schluss-actions { margin-top: 0.75rem; text-align: right; }
+  .schluss-full-link { font-size: 0.95rem; color: inherit; text-decoration: underline; }
 
   /* Zweispaltige Zitat/Widmung Sektion */
   .hero-quote-dedication {
@@ -188,7 +300,7 @@ import Navigation from '../components/Navigation.astro';
     .hero-quote-dedication { flex-direction: column; gap: 0.75rem; max-width: 100%; padding-left: 1rem; padding-right: 1rem; }
     .quote-block, .dedication-block { max-width: 100%; min-width: auto; padding: 0.4rem 0; }
     .hero-sep { width: 100%; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0.12), rgba(255,255,255,0.06)); margin: 0.45rem 0; }
-    .hero-foreword { text-align: left; padding-left: 1rem; padding-right: 1rem; }
+    .hero-foreword, .hero-closing { text-align: left; padding-left: 1rem; padding-right: 1rem; }
   }
 
   @media (max-width: 900px) {
@@ -197,6 +309,9 @@ import Navigation from '../components/Navigation.astro';
 
   /* kleine Feinheiten */
   .hero-quote-dedication a:focus, .hero-quote-dedication a:hover { outline: none; text-decoration: underline; }
-  .hero-foreword .foreword-teaser em { font-style: italic; }
+  .hero-foreword .foreword-teaser em, .hero-closing .closing-teaser em { font-style: italic; }
+
+  /* Vorwort / Schluss content styling */
+  .vorwort-content, .schluss-content { max-width: 68ch; margin: 0 auto 1rem; text-align: left; }
 </style>
 </html>

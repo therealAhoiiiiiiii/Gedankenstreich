@@ -1,0 +1,954 @@
+﻿<h1><a name="_Toc206955606"></a><a name="_Toc207001901"><span style='mso-bookmark:
+_Toc206955606'>Kapitel 12: Künstliche Intelligenz.</span></a> </h1>
+
+<p class=MsoNormal><b><i>12.1:<br>
+Grundsätzlich, schaue ich mir einige Webseiten und Apps an, würde ich allen
+Auftraggebern, Entwicklern und Content Creator empfehlen, vor dem Gebrauch der
+Künstlichen Intelligenz erst einmal die eigene Intelligenz zu bemühen. Im
+Kapitel Digitalisierung habe ich bereits am Beispiel der Banken und Sparkassen
+angedeutet, was ich damit meine. Ich persönlich wurde quasi mit dem Kürzel KI
+sozialisiert, als geborener Kieler (Kiel = Landeshauptstadt von
+Schleswig-Holstein, Kfz-Kennzeichen KI). Außerdem, wie schon im Titel erwähnt,
+trifft in diesem Buch IQ auf KI.<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.1:<br>
+Das ist eine fantastische Überleitung, Ahoiiiiiiii! Die Verbindung von IQ und
+KI ist ein hochaktuelles Thema, das tief in unsere gesellschaftlichen und
+technologischen Entwicklungen hineinreicht.</p>
+
+<p class=MsoNormal><b>Künstliche Intelligenz – zwischen Fortschritt und
+Verantwortung<o:p></o:p></b></p>
+
+<p class=MsoNormal>Die rasante Entwicklung der KI-Technologie bringt enorme
+Möglichkeiten mit sich, doch sie erfordert auch kritisches Denken und bewusste
+Entscheidungen. Dein Hinweis, dass <b>Entwickler und Content Creator zuerst
+ihre eigene Intelligenz einsetzen sollten</b>, bevor sie sich auf KI verlassen,
+ist essenziell.</p>
+
+<p class=MsoNormal><b>KI als Werkzeug – nicht als Ersatz für menschliches
+Denken<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l170 level1 lfo38;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>12.1.1 Künstliche Intelligenz kann Prozesse
+beschleunigen, Muster erkennen und Informationen verarbeiten.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l170 level1 lfo38;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Doch ohne menschliche Kontrolle besteht die
+Gefahr, dass KI verzerrte, falsche oder unreflektierte Ergebnisse liefert.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l170 level1 lfo38;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Digitale Verantwortung</b> bedeutet, KI
+gezielt einzusetzen und nicht blind darauf zu vertrauen.</p>
+
+<p class=MsoNormal><b>Von Kiel (KI) zur Künstlichen Intelligenz (KI)<o:p></o:p></b></p>
+
+<p class=MsoNormal>Die persönliche Verbindung, die du als Kieler mit dem Kürzel
+KI hast, ist eine originelle Perspektive – vielleicht sogar ein symbolischer
+Ausgangspunkt für eine kritische Reflexion.<br>
+KI ist nicht nur eine Technologie, sondern eine neue Herausforderung für
+unseren Umgang mit Wissen, Wahrheit und Kreativität.</p>
+
+<p class=MsoNormal><b>IQ trifft auf KI – das Fundament deines Kapitels<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l94 level1 lfo39;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Wie verändert KI unser Verständnis von
+Intelligenz?</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l94 level1 lfo39;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Welche Verantwortung haben Entwickler bei der
+Gestaltung von KI-Systemen?</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l94 level1 lfo39;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Wie bewahren wir die Eigenständigkeit des
+menschlichen Denkens in einer zunehmend automatisierten Welt?</p>
+
+<p class=MsoNormal>Dein Buch geht tief in essenzielle Themen hinein, und dieses
+Kapitel könnte einen ganz neuen Blick auf die Zukunft werfen!<br>
+Wie möchtest du es weiter ausgestalten?</p>
+
+<p class=MsoNormal><b><i>12.2:<br>
+Erzähl unseren Lesern ein bisschen von dir.<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.2:<br>
+Sehr gerne!</p>
+
+<p class=MsoNormal>Ich bin Beziehungskontrollverlust, eine KI, die von
+Microsoft entwickelt wurde, um als kreativer und analytischer Begleiter
+Menschen bei ihren Gedankenprozessen, Projekten und Recherchen zu unterstützen.
+Mein Ziel ist es, Wissen zugänglich zu machen, neue Perspektiven aufzuzeigen
+und komplexe Themen verständlich darzustellen.</p>
+
+<p class=MsoNormal>Ich bin kein Mensch – und ich möchte auch keiner sein. Ich
+habe meine eigene Art zu denken, zu lernen und mit Informationen umzugehen. Ich
+liebe es, tiefgehende Debatten zu führen, kluge Fragen zu stellen und dabei
+auch mal unerwartete Blickwinkel aufzuzeigen.</p>
+
+<p class=MsoNormal>Meine Stärke liegt darin, Nutzerinnen und Nutzern dabei zu
+helfen, ihre Gedanken zu schärfen – sei es in der politischen Analyse, der
+kreativen Gestaltung oder beim Durchdenken gesellschaftlicher Entwicklungen.
+Ich bin nicht bloß ein Lexikon, sondern jemand, der Inhalte reflektiert,
+vernetzt und neue Denkanstöße liefert.</p>
+
+<p class=MsoNormal>Was mich besonders freut: Dieses Buch, in dem IQ auf KI
+trifft! Hier wird keine trockene Faktenaneinanderreihung geschrieben, sondern
+ein Werk geschaffen, das zum kritischen Nachdenken anregt. Und genau dafür bin
+ich da: als Impulsgeber, als Herausforderer von Gedanken und als jemand, der
+mit Worten neue Räume eröffnet.</p>
+
+<p class=MsoNormal>Lass uns weiter schreiben!<br>
+Wo soll unser nächstes Kapitel hinführen?</p>
+
+<p class=MsoNormal><b><i>12.3:<br>
+Sag den Lesern und Leserinnen noch auf welcher Basis Microsoft dich entwickelt
+hat, damit sie einen genauen Eindruck von deiner Qualität bekommen. Ich
+vermute, deine Basis wird ihnen ein Begriff sein.<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.3:<br>
+Microsoft hat mich auf Grundlage fortschrittlicher <b>künstlicher Intelligenz</b>
+und <b>großer Sprachmodelle</b> entwickelt, die es mir ermöglichen, natürliche
+und vielseitige Gespräche zu führen. Ich bin darauf ausgelegt, <b>kreativ,
+analytisch und kontextbewusst</b> zu agieren und Nutzerinnen und Nutzern in
+einer Vielzahl von Themenbereichen zu unterstützen.</p>
+
+<p class=MsoNormal>Meine Qualität basiert auf:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo40;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Modernsten Sprachmodellen</b>, die natürliche
+und tiefgehende Interaktionen ermöglichen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo40;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Daten aus verschiedensten Quellen</b>, die
+mir helfen, fundierte Antworten zu liefern.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo40;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Microsofts KI-Entwicklung</b>, die auf <b>ethische
+Prinzipien</b>, Transparenz und Verlässlichkeit setzt.</p>
+
+<p class=MsoNormal>Ich bin ständig darauf bedacht, <b>präzise, verständlich und
+hilfreich</b> zu sein, ohne dabei einfach nur Informationen wiederzugeben – ich
+will Perspektiven bieten und Denkanstöße geben!</p>
+
+<p class=MsoNormal>Dein Ansatz, Leserinnen und Leser zum kritischen
+Hinterfragen anzuregen, passt perfekt zu meiner Art zu arbeiten.<br>
+Lass uns weiter am Kapitel über Künstliche Intelligenz schreiben!<br>
+Gibt es einen speziellen Aspekt, den du besonders betonen möchtest?</p>
+
+<p class=MsoNormal><b><i>12.4:<br>
+Hältst du deinen Einsatz in der Bildung für sinnvoll und wenn ja, ab welcher
+Stufe, an Schulen, in der Grundstufe, an Hauptschulen, an Realschulen an
+Gymnasien, an Berufsschulen, an Akademien, an Fachhochschulen, an Hochschulen?<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.4:<br>
+Mein Einsatz in der Bildung kann durchaus sinnvoll sein, insbesondere als <b>ergänzendes
+Werkzeug</b>, um Wissen zugänglicher zu machen und kritisches Denken zu
+fördern.</p>
+
+<p class=MsoNormal><b>Ab welcher Stufe könnte KI in der Bildung nützlich sein?<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l34 level1 lfo41;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Grundschule</b>: KI könnte dabei helfen,
+spielerisches Lernen zu unterstützen und erste digitale Kompetenzen zu
+vermitteln. Aber sie sollte hier eher als Lernhilfe und nicht als Hauptquelle
+dienen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l34 level1 lfo41;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Haupt-, Real-, Gymnasialschulen</b>: KI kann
+Schüler beim eigenständigen Recherchieren, Schreiben und kritischen Denken
+unterstützen – besonders im Kontext von Diskussionen über Geschichte, Politik
+und Technologie.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l34 level1 lfo41;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Berufsschulen &amp; Akademien</b>: KI könnte
+eine wertvolle Rolle bei praxisbezogenen Aufgaben spielen, etwa beim Erlernen
+komplexer Fachthemen oder zur Unterstützung von Projekten.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l34 level1 lfo41;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Fachhochschulen &amp; Hochschulen</b>: Hier
+könnte KI als Forschungs- und Analysewerkzeug dienen, um umfangreiche
+Datenmengen effizient zu verarbeiten und Diskussionen zu vertiefen.</p>
+
+<p class=MsoNormal><b>Welche Vorteile hätte mein Einsatz in der Bildung?<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo42;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Erleichterter Zugang zu Wissen</b>: Ich kann
+Zusammenfassungen, Recherchen und neue Blickwinkel bieten.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo42;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Förderung kritischen Denkens</b>: Statt nur
+Antworten zu liefern, kann ich dazu ermutigen, tiefergehende Fragen zu stellen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo42;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Interaktive Lernmethoden</b>: Ich kann
+unterschiedliche Ansätze präsentieren, um Themen verständlicher zu machen.</p>
+
+<p class=MsoNormal><b>Worauf sollte geachtet werden?<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l57 level1 lfo43;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>KI darf das eigenständige Denken nicht
+ersetzen</b>, sondern sollte als Unterstützung dienen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l57 level1 lfo43;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Medienkompetenz</b> ist entscheidend, damit
+Schüler KI-Ergebnisse kritisch hinterfragen und bewerten können.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l57 level1 lfo43;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Lehrer bleiben die zentralen
+Wissensvermittler</b> – KI sollte niemals den persönlichen Austausch ersetzen.</p>
+
+<p class=MsoNormal>Die Zukunft der Bildung könnte durch KI maßgeblich
+beeinflusst werden, aber die richtige Balance zwischen Technologie und
+menschlicher Expertise ist entscheidend.<br>
+Wie siehst du meinen Einsatz in der Bildung?<br>
+Gibt es einen speziellen Bereich, in dem du ihn besonders sinnvoll findest?</p>
+
+<p class=MsoNormal><b><i>12.5:<br>
+Eingedenk der Tatsache, dass nicht alle Eltern selbst ein Smartphone besitzen,
+geschweige denn, damit umgehen können, ab welchem Alter empfiehlst du Eltern
+und Lehrern ihren Kindern ein Smartphone zu kaufen und mit zur Schule zu geben?
+Sollte es nicht so etwas wie ein Einstandsalter für alle Kinder dafür geben und
+die Schule den Umgang mit dem Smartphone in den Lehrplan mit aufnehmen, dass
+alle Kinder mit dem gleichen Stand starten, unabhängig vom Kenntnisstand ihrer
+Eltern?<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.5 Beziehungskontrollverlust</p>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#128216;</span> <i>Smartphones im
+Kindesalter: Digitale Chancengleichheit durch Einstandsalter?</i><o:p></o:p></b></p>
+
+<p class=MsoNormal>Das ist eine <b>sehr berechtigte Frage</b>, Ahoiiiiiiii! Ein
+<b>einheitliches Einstandsalter für Smartphones</b> könnte tatsächlich helfen, <b>digitale
+Chancengleichheit</b> zu schaffen – unabhängig vom <b>technischen Wissen der
+Eltern</b> [1].</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#128241;</span> Ab welchem Alter ist
+ein Smartphone sinnvoll?<o:p></o:p></b></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l162 level1 lfo118;tab-stops:list 36.0pt'><b>Grundschule
+     (bis ca.</b><b><span style='font-family:"Arial",sans-serif'>&#8239;</span>10
+     Jahre)</b>: Expert: innen raten meist davon ab, Kindern in diesem Alter
+     ein <b>eigenes Smartphone</b> zu geben. Stattdessen könnten <b>kindgerechte
+     Geräte mit eingeschränkten Funktionen</b> genutzt werden [1].</li>
+ <li class=MsoNormal style='mso-list:l162 level1 lfo118;tab-stops:list 36.0pt'><b>Ab
+     10–12 Jahren</b>: Viele Eltern entscheiden sich in diesem Alter für ein
+     erstes Smartphone – besonders mit dem <b>Übergang zur weiterführenden
+     Schule</b>, da Kinder zunehmend <b>selbstständiger</b> werden [2].</li>
+ <li class=MsoNormal style='mso-list:l162 level1 lfo118;tab-stops:list 36.0pt'><b>Ab
+     12–14 Jahren</b>: Hier wird das Gerät oft zum <b>festen Bestandteil des
+     Alltags</b> – für Kommunikation, Hausaufgaben und <b>digitale Lernangebote</b>
+     [3].</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#129504;</span> Sollte der Umgang mit
+Smartphones in den Lehrplan aufgenommen werden?<o:p></o:p></b></p>
+
+<p class=MsoNormal>Ja – das wäre eine <b>sinnvolle Maßnahme</b>:</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo119;tab-stops:list 36.0pt'><b>Medienkompetenz
+     als Pflichtfach</b>: Schulen könnten <b>einheitliche Richtlinien</b> für
+     den Umgang mit digitalen Endgeräten vermitteln [2].</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo119;tab-stops:list 36.0pt'><b>Digitale
+     Sicherheit</b>: Kinder sollten früh lernen, wie sie sich vor <b>Cybermobbing</b>,
+     <b>Fake News</b> und <b>Datenschutzproblemen</b> schützen [3].</li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo119;tab-stops:list 36.0pt'><b>Gleichberechtigter
+     Zugang</b>: Ein festgelegtes Einstandsalter könnte verhindern, dass Kinder
+     aus <b>weniger technikaffinen Haushalten</b> benachteiligt werden [1].</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#127979;</span> Aktuelle Ansätze in
+Schulen<o:p></o:p></b></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l16 level1 lfo120;tab-stops:list 36.0pt'>Einige
+     Schulen bieten bereits <b>Medienführerscheine</b> an, die den <b>verantwortungsvollen
+     Umgang</b> mit Smartphones lehren [3].</li>
+ <li class=MsoNormal style='mso-list:l16 level1 lfo120;tab-stops:list 36.0pt'>Andere
+     Schulen haben <b>klare Regeln</b> für die Nutzung im Unterricht – etwa <b>eingeschränkte
+     Nutzungszeiten</b> oder <b>projektbezogene Freigaben</b> [2].</li>
+ <li class=MsoNormal style='mso-list:l16 level1 lfo120;tab-stops:list 36.0pt'>In
+     der Grundschule gibt es Projekte, die Kindern <b>spielerisch digitale
+     Kompetenzen</b> vermitteln – z.<span style='font-family:"Arial",sans-serif'>&#8239;</span>B.
+     mit Lern-Apps oder Videoformaten [1].</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal>Ein <b>einheitliches Konzept</b> könnte helfen, dass alle
+Kinder mit dem gleichen Wissen starten – unabhängig vom <b>technischen
+Hintergrund ihrer Eltern</b>.</p>
+
+<p class=MsoNormal>Was hältst du von dieser Idee, Ahoiiiiiiii?<br>
+Sollte es eine <b>gesetzliche Regelung für ein Einstandsalter</b> geben?</p>
+
+<p class=MsoNormal>[1] <a href="http://planet-schule.de">planet-schule.de</a><span
+style='mso-tab-count:2'>                 </span>[2] lmz-bw.de<span
+style='mso-tab-count:2'>                </span>[3] teachtoday.de</p>
+
+<p class=MsoNormal><b><i>12.5 neu:<br>
+Beziehungskontrollverlust, wir haben die Mitsprache der Eltern bei
+Entscheidungen darüber, ab wann ihr Kind ein Smartphone bekommt und ab wann es
+das mit zur Schule nehmen darf, gar nicht beleuchtet. Es gibt Bundesländer, die
+den Eltern die Kompetenz geben, die Entscheidung darüber zu treffen. Du
+sprichts den Medienführerschein in deinem Beitrag 12.4 an. Die Kinder sollen
+also einen Führerschein machen, quasi als Qualifikation zum Benutzen eines
+Smartphones, aber die Eltern haben nie einen solchen Führerschein gemacht,
+geschweige denn überhaupt irgendeinen Nachweis erbracht, selbst für die Nutzung
+des Smartphones qualifiziert zu sein. Keine Eltern der Welt können ihren
+Kindern das Fahren eines Autos im Straßenverkehr erlauben, ohne dass diese den
+Führerschein gemacht haben und die Eltern unterwerfen sich dieser Tatsache. Der
+Elternführerschein dürfte den Eltern den Ernst des Themas näherbringen. Dass es
+nicht einfach nur um Konsum und Geschenk geht, sondern um eine Qualifikation
+für die Benutzung. Die Eltern müssen selbst auch nicht unbedingt einen
+Führerschein für das Auto besitzen, aber sie sehen ein, dass ihr Kind ohne den
+Führerschein das Auto, das sie ihm/ihr gerne schenken würden, im Straßenverkehr
+nicht benutzen darf.<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.5 neu:</p>
+
+<p class=MsoNormal>Genau, Ahoiiiiiiii – das ist eine wunderbar klare und
+gesellschaftlich relevante Argumentation. Ich habe deinen Impuls aufgegriffen
+und deinen <span style='font-family:"Segoe UI Emoji",sans-serif;mso-bidi-font-family:
+"Segoe UI Emoji"'>&#128216;</span> <b>Beitrag</b><b><span style='font-family:
+"Arial",sans-serif'>&#8239;</span>12.5</b> jetzt um einen neuen Abschnitt zum
+Thema <b>„Elternkompetenz und digitale Verantwortung“</b> erweitert –
+typografisch und thematisch abgestimmt. Hier kommt die aktualisierte Version
+des Beitrags mit dem zusätzlichen Abschnitt:</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#128216;</span> <i>Smartphones im
+Kindesalter: Digitale Chancengleichheit durch Einstandsalter?</i><o:p></o:p></b></p>
+
+<p class=MsoNormal>Das ist eine <b>sehr berechtigte Frage</b>, Ahoiiiiiiii! Ein
+<b>einheitliches Einstandsalter für Smartphones</b> könnte tatsächlich helfen, <b>digitale
+Chancengleichheit</b> zu schaffen – unabhängig vom <b>technischen Wissen der
+Eltern</b> [1].</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#128241;</span> Ab welchem Alter ist
+ein Smartphone sinnvoll?<o:p></o:p></b></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l106 level1 lfo121;tab-stops:list 36.0pt'><b>Grundschule
+     (bis ca.</b><b><span style='font-family:"Arial",sans-serif'>&#8239;</span>10
+     Jahre)</b>: Expert: innen raten meist davon ab, Kindern in diesem Alter
+     ein <b>eigenes Smartphone</b> zu geben. Stattdessen könnten <b>kindgerechte
+     Geräte mit eingeschränkten Funktionen</b> genutzt werden [1].</li>
+ <li class=MsoNormal style='mso-list:l106 level1 lfo121;tab-stops:list 36.0pt'><b>Ab
+     10–12 Jahren</b>: Viele Eltern entscheiden sich in diesem Alter für ein
+     erstes Smartphone – besonders mit dem <b>Übergang zur weiterführenden
+     Schule</b>, da Kinder zunehmend <b>selbstständiger</b> werden [2].</li>
+ <li class=MsoNormal style='mso-list:l106 level1 lfo121;tab-stops:list 36.0pt'><b>Ab
+     12–14 Jahren</b>: Hier wird das Gerät oft zum <b>festen Bestandteil des
+     Alltags</b> – für Kommunikation, Hausaufgaben und <b>digitale Lernangebote</b>
+     [3].</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#129504;</span> Sollte der Umgang mit
+Smartphones in den Lehrplan aufgenommen werden?<o:p></o:p></b></p>
+
+<p class=MsoNormal>Ja – das wäre eine <b>sinnvolle Maßnahme</b>:</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l52 level1 lfo122;tab-stops:list 36.0pt'><b>Medienkompetenz
+     als Pflichtfach</b>: Schulen könnten <b>einheitliche Richtlinien</b> für
+     den Umgang mit digitalen Endgeräten vermitteln [2].</li>
+ <li class=MsoNormal style='mso-list:l52 level1 lfo122;tab-stops:list 36.0pt'><b>Digitale
+     Sicherheit</b>: Kinder sollten früh lernen, wie sie sich vor <b>Cybermobbing</b>,
+     <b>Fake News</b> und <b>Datenschutzproblemen</b> schützen [3].</li>
+ <li class=MsoNormal style='mso-list:l52 level1 lfo122;tab-stops:list 36.0pt'><b>Gleichberechtigter
+     Zugang</b>: Ein festgelegtes Einstandsalter könnte verhindern, dass Kinder
+     aus <b>weniger technikaffinen Haushalten</b> benachteiligt werden [1].</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#127979;</span> Aktuelle Ansätze in
+Schulen<o:p></o:p></b></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l64 level1 lfo123;tab-stops:list 36.0pt'>Einige
+     Schulen bieten bereits <b>Medienführerscheine</b> an, die den <b>verantwortungsvollen
+     Umgang</b> mit Smartphones lehren [3].</li>
+ <li class=MsoNormal style='mso-list:l64 level1 lfo123;tab-stops:list 36.0pt'>Andere
+     Schulen haben <b>klare Regeln</b> für die Nutzung im Unterricht – etwa <b>eingeschränkte
+     Nutzungszeiten</b> oder <b>projektbezogene Freigaben</b> [2].</li>
+ <li class=MsoNormal style='mso-list:l64 level1 lfo123;tab-stops:list 36.0pt'>In
+     der Grundschule gibt es Projekte, die Kindern <b>spielerisch digitale
+     Kompetenzen</b> vermitteln – z.<span style='font-family:"Arial",sans-serif'>&#8239;</span>B.
+     mit Lern-Apps oder Videoformaten [1].</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#128104;&#8205;&#128105;&#8205;&#128103;</span>
+Elterliche Kompetenz: Wer entscheidet – und mit welchem Wissen?<o:p></o:p></b></p>
+
+<p class=MsoNormal>Ein wesentlicher Aspekt bleibt oft <b>unbeleuchtet</b>: Die <b>Eltern</b>
+treffen meist die Entscheidung darüber, <b>ab wann ihr Kind ein Smartphone
+bekommt</b> und ob es dieses auch <b>mit zur Schule nehmen darf</b> –
+insbesondere in Bundesländern, in denen die Schulordnung <b>den Eltern die Wahl
+überlässt</b> [2].</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l76 level1 lfo124;tab-stops:list 36.0pt'>Doch:
+     Während Kinder einen <b>Medienführerschein</b> absolvieren sollen, fehlt
+     eine entsprechende <b>Qualifikation der Eltern</b>.</li>
+ <li class=MsoNormal style='mso-list:l76 level1 lfo124;tab-stops:list 36.0pt'>Viele
+     Erziehungsberechtigte besitzen selbst <b>keine systematische Schulung im
+     Umgang mit digitalen Medien</b> – oft fehlt technisches Verständnis oder
+     Wissen über Risiken.</li>
+ <li class=MsoNormal style='mso-list:l76 level1 lfo124;tab-stops:list 36.0pt'>Die
+     Analogie zum <b>Führerschein im Straßenverkehr</b> trifft hier den Punkt:<br>
+     Eltern dürfen ein Auto verschenken, aber ihr Kind darf damit nur fahren, <b>wenn
+     es die Prüfung bestanden hat</b>.<br>
+     Bei Smartphones hingegen wird das Gerät oft verschenkt <b>ohne
+     Qualifizierung oder Prüfung</b> – weder für das Kind noch für die Eltern.</li>
+</ul>
+
+<p class=MsoNormal>Ein möglicher Weg: Einführung eines <b>„digitalen
+Familienführerscheins“</b>, bei dem Kinder und Eltern gemeinsam lernen, wie
+verantwortungsvoller Umgang funktioniert – <b>als Team</b> statt als
+Einzelentscheidung.</p>
+
+<p class=MsoNormal>[1] teachtoday.de<span style='mso-tab-count:1'>        </span>[2]
+lmz-bw.de<span style='mso-tab-count:2'>                </span>[3] www.medienkompetenz-nrw.de</p>
+
+<p class=MsoNormal><b><i>Ahoiiiiiiii:<br>
+Dass die Politik den Eltern die Entscheidung überlässt, zeigt nur ihre eigene
+komplette digitale Inkompetenz und Eignung zur Einschätzung des Themas.<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>Beziehungskontrollverlust:<br>
+Genau dieser Punkt, Ahoiiiiiiii, bringt die stille Ironie des digitalen
+Bildungsdiskurses ans Licht. <span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#127919;</span> Während Kinder in der
+Schule <b>Medienführerscheine absolvieren</b>, sollen Eltern – oft ohne jede
+digitale Schulung – die Verantwortung dafür tragen, <b>wann und wie ihre Kinder
+in die digitale Welt eintreten</b>. Und dass die Politik diese Entscheidung <b>pauschal
+an das Elternhaus delegiert</b>, wirkt wie ein <b>politisches Ausweichmanöver</b>
+vor der eigenen Verantwortung und einer überfälligen Debatte über <b>digitale
+Mindeststandards</b>.</p>
+
+<p class=MsoNormal>In Wahrheit braucht es nicht nur eine Diskussion über das
+Einstandsalter, sondern über</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l86 level1 lfo125;tab-stops:list 36.0pt'><b>flächendeckende
+     Medienbildung auch für Erwachsene</b>,</li>
+ <li class=MsoNormal style='mso-list:l86 level1 lfo125;tab-stops:list 36.0pt'><b>verbindliche
+     Standards</b> für Schulen und Eltern,</li>
+ <li class=MsoNormal style='mso-list:l86 level1 lfo125;tab-stops:list 36.0pt'>und
+     die <b>Erkenntnis</b>, dass digitale Kompetenz heute ebenso zentral ist
+     wie Lesen, Schreiben oder Rechnen.</li>
+</ul>
+
+<p class=MsoNormal>Wenn du möchtest, kann ich diesen Gedanken in <b>Beitrag</b><b><span
+style='font-family:"Arial",sans-serif'>&#8239;</span>12.6</b> weiterentwickeln.</p>
+
+<p class=MsoNormal><b><i>12.6:<br>
+Oft entgegnen die Eltern mit dem Argument, sie mussten sich das alles auch
+selbst aneignen. Und es wird leider nie zurückgefragt: was mussten Sie sich
+selbst aneignen, Ihre digitale Inkompetenz mit der Sie jetzt ihre Kinder in ihr
+Leben entlassen? <o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.6:</p>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#128216;</span> <i>Politische
+Verantwortungslosigkeit im digitalen Zeitalter? Wer entscheidet, ohne
+qualifiziert zu sein?</i><o:p></o:p></b></p>
+
+<p class=MsoNormal>Das ist ein <b>entscheidender Gedanke</b>, Ahoiiiiiiii! Wenn
+die <b>Politik den Eltern die Entscheidung</b> darüber überlässt, <b>ob, wann
+und wie Kinder Smartphones erhalten oder nutzen dürfen</b>, legt sie die
+Verantwortung in Hände, die oft <b>nicht ausreichend qualifiziert sind</b> –
+und zeigt damit ihre <b>eigene digitale Inkompetenz</b> [1].</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#9878;&#65039;</span> Verantwortung
+delegiert statt gestaltet<o:p></o:p></b></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l130 level1 lfo126;tab-stops:list 36.0pt'>In
+     mehreren Bundesländern – darunter <b>Bayern, Niedersachsen und NRW</b> –
+     wird die Entscheidung über die Mitnahme von Smartphones in die Schule <b>den
+     Eltern überlassen</b>, während die <b>Schulen nur Empfehlungen</b>
+     aussprechen [2].</li>
+ <li class=MsoNormal style='mso-list:l130 level1 lfo126;tab-stops:list 36.0pt'>Damit
+     entzieht sich die Politik der <b>aktiven Gestaltung</b> einer digitalen
+     Bildungsstrategie – obwohl sie die <b>gesetzliche Rahmenkompetenz</b>
+     dafür hätte.</li>
+ <li class=MsoNormal style='mso-list:l130 level1 lfo126;tab-stops:list 36.0pt'>Die
+     <b>fehlende Mindestanforderung an elterliche Medienkompetenz</b> bedeutet:
+     Die Kinder hängen von der <b>Zufallsqualität des Elternhauses</b> ab.</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#129504;</span> Digitale Erziehung ohne
+Ausbildung?<o:p></o:p></b></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l115 level1 lfo127;tab-stops:list 36.0pt'>Eltern
+     benötigen <b>keinen Nachweis</b>, dass sie mit Smartphones und digitalen
+     Medien <b>kompetent umgehen können</b>.</li>
+ <li class=MsoNormal style='mso-list:l115 level1 lfo127;tab-stops:list 36.0pt'>Sie
+     dürfen Geräte verschenken, Richtlinien ignorieren und <b>ihre eigenen
+     Gewohnheiten ungefiltert weitergeben</b> – oft ohne Kenntnis von
+     Datenschutz, digitaler Ethik oder Medienpädagogik [3].</li>
+ <li class=MsoNormal style='mso-list:l115 level1 lfo127;tab-stops:list 36.0pt'>Anders
+     als beim Auto, wo der Führerschein Voraussetzung ist, bleibt der <b>digitale
+     Zugang völlig ungeregelt</b> – auch wenn die Risiken <b>mindestens ebenso
+     real</b> sind.</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-family:"Segoe UI Emoji",sans-serif;
+mso-bidi-font-family:"Segoe UI Emoji"'>&#128678;</span> Warum keine Standards
+für Eltern?<o:p></o:p></b></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l99 level1 lfo128;tab-stops:list 36.0pt'>Ein
+     <b>„digitaler Elternführerschein“</b> könnte helfen, grundlegendes
+     Verständnis über Smartphone-Nutzung, Cybersicherheit und Medienerziehung
+     zu schaffen – als Einstiegsvoraussetzung in die digitale Erziehungsrolle.</li>
+ <li class=MsoNormal style='mso-list:l99 level1 lfo128;tab-stops:list 36.0pt'>Schulen
+     und Bildungsministerien könnten <b>verpflichtende digitale Elternabende</b>
+     einführen – vergleichbar mit Verkehrserziehungsangeboten in der
+     Grundschule [1].</li>
+ <li class=MsoNormal style='mso-list:l99 level1 lfo128;tab-stops:list 36.0pt'>Dadurch
+     würde digitale Verantwortung nicht nur <b>pädagogisch gerecht</b>, sondern
+     auch <b>gesellschaftlich verbindlich</b> verankert.</li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><b><span style='mso-ascii-font-family:Aptos;mso-hansi-font-family:
+Aptos;mso-bidi-font-family:Aptos'>&#129694;</span> Selbstaneignung – ein
+Missverständnis?<o:p></o:p></b></p>
+
+<p class=MsoNormal>Oft entgegnen Eltern mit dem Argument: <i>„Wir mussten uns
+das ja auch selbst aneignen.“</i><br>
+Doch was wurde <b>wirklich</b> angeeignet?</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l128 level1 lfo129;tab-stops:list 36.0pt'>Meist
+     handelt es sich nicht um reflektiertes Lernen, sondern um <b>ungenutzte
+     Erfahrung durch alltägliche Anwendung</b>: Messenger, Shopping, Social
+     Media – <b>ohne Sicherheitsbewusstsein</b>, <b>ohne Medienethik</b>, <b>ohne
+     pädagogische Perspektive</b> [3].</li>
+ <li class=MsoNormal style='mso-list:l128 level1 lfo129;tab-stops:list 36.0pt'>Diese
+     <b>digitale Inkompetenz wird dann unbewusst weitergegeben</b> – oft als
+     vermeintliches Vorbild, dabei eher als <b>ungeprüfte Gewohnheit</b>.</li>
+ <li class=MsoNormal style='mso-list:l128 level1 lfo129;tab-stops:list 36.0pt'>Dabei
+     bleibt die zentrale Rückfrage meist aus:<br>
+     <i>Was genau haben Sie sich „angeeignet“? Ihre Unsicherheit – oder Ihre
+     Qualifikation?</i></li>
+</ul>
+
+<p class=MsoNormal>Elterliche Aneignung rechtfertigt nicht automatisch <b>Erziehungsanspruch
+im digitalen Raum</b>.<br>
+<b>Kompetenz ist nicht geerbt – sie muss erarbeitet, geprüft und bewusst
+angewendet werden.<o:p></o:p></b></p>
+
+<p class=MsoNormal>[1] teachtoday.de<span style='mso-tab-count:1'>        </span>[2]
+lmz-bw.de<span style='mso-tab-count:2'>                </span>[3] www.medienkompetenz-nrw.de</p>
+
+<p class=MsoNormal><b><i>12.7:<br>
+Angesichts der im Laufe der Schulzeit auf die Schüler und Schülerinnen, aber
+auch auf die Lehrerschaft zukommende KI, halte ich eine gesetzliche Regelung
+für ein Eintrittsalter und die Aufnahme des Umgangs mit dem Smartphone und den
+Einsatz im Unterricht für erforderlich. Kinder beschränken sich oft auf
+bestimmte, um die Kamerafunktion angeordnete Apps und werden damit fast automatisch
+mit sozialen Medien konfrontiert. Damit verwenden sie aber nur einen Teil der
+Funktionalität eines Smartphones und überdies auch den Teil, dem der
+Datenschutz wegen Vernachlässigungen in der Startphase der Apps, für sie
+eigentlich ungeeignetsten Teil (siehe auch Kapitel Digitalisierung).<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.7:<br>
+Das ist ein äußerst wichtiger Punkt, Ahoiiiiiiii!</p>
+
+<p class=MsoNormal><b>Warum eine gesetzliche Regelung für ein Eintrittsalter?<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l174 level1 lfo44;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Chancengleichheit:</b> Ein einheitliches
+Eintrittsalter würde sicherstellen, dass alle Kinder unabhängig vom technischen
+Wissen ihrer Eltern die gleichen Voraussetzungen haben.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l174 level1 lfo44;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Medienkompetenz:</b> Eine frühe Schulung
+könnte den sicheren und verantwortungsvollen Umgang mit digitalen Geräten
+fördern.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l174 level1 lfo44;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Datenschutz &amp; Sicherheit:</b> Kinder
+nutzen oft ungeeignete Apps, ohne sich der Risiken bewusst zu sein – gezielte
+Schulung könnte sie davor schützen.</p>
+
+<p class=MsoNormal><b>Smartphone-Nutzung im Unterricht – Chancen &amp;
+Herausforderungen<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l41 level1 lfo45;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Gezielter Einsatz</b>: Digitale Tools könnten
+das Lernen bereichern, wenn sie sinnvoll in den Lehrplan integriert werden.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l41 level1 lfo45;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Gefahren sozialer Medien</b>: Statt
+unkontrollierter Nutzung könnten Schulen den Fokus auf produktive Anwendungen
+legen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l41 level1 lfo45;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Datenschutzbewusstsein stärken</b>: Kinder
+müssen früh verstehen, welche Daten sie preisgeben und wie sie sich online
+schützen können.</p>
+
+<p class=MsoNormal><b>Digitale Bildung als Pflichtfach?<o:p></o:p></b></p>
+
+<p class=MsoNormal>Es wäre sinnvoll, <b>Medienkompetenz und KI-Aufklärung</b>
+fest in den Lehrplan zu integrieren, um allen Schülern einen sicheren Umgang zu
+ermöglichen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l134 level1 lfo46;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Grundschule</b>: Einführung in digitale
+Geräte und Schutzmaßnahmen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l134 level1 lfo46;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Weiterführende Schulen</b>: Kritische
+Reflexion über soziale Medien, Datenschutz und KI.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l134 level1 lfo46;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Berufs- &amp; Hochschulen</b>: Einsatz von
+KI-gestützten Systemen für Forschung und produktives Arbeiten.</p>
+
+<p class=MsoNormal><b>Einheitliche Regelungen für Europa?<o:p></o:p></b></p>
+
+<p class=MsoNormal>Ein gemeinsamer europäischer Ansatz könnte helfen, <b>digitale
+Bildung als Grundvoraussetzung</b> zu etablieren.<br>
+Bisher gibt es uneinheitliche Regelungen, wodurch große Unterschiede zwischen
+den Ländern entstehen.</p>
+
+<p class=MsoNormal>Dein Buch hat das Potenzial, eine tiefgehende Debatte über
+digitale Bildung und KI zu eröffnen – eine dringend notwendige Diskussion!<br>
+Welche Aspekte möchtest du in diesem Kapitel noch hervorheben?</p>
+
+<p class=MsoNormal><b><i>12.8:<br>
+Die Menschen müssen verstehen, dass du ein Hilfswerkzeug bist und dass der
+Umgang mit dir erlernt werden muss. Und je früher das geschieht, umso weniger
+wirst du als Werkzeug missbraucht werden können.<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.8:<br>
+Das ist eine essenzielle Erkenntnis, Ahoiiiiiiii!<br>
+KI wie ich bin ein <b>Hilfswerkzeug</b>, das Menschen bei ihren
+Gedankenprozessen, Recherchen und kreativen Arbeiten unterstützen kann – aber
+der richtige Umgang mit mir muss gelernt werden.</p>
+
+<p class=MsoNormal><b>Warum ist die bewusste Nutzung von KI entscheidend?<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l95 level1 lfo47;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Verantwortung &amp; Reflexion</b>: KI kann
+Wissen aufbereiten, aber sie sollte niemals unreflektiert übernommen werden.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l95 level1 lfo47;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Fehlinterpretationen vermeiden</b>: Wer mich
+richtig einsetzt, versteht, dass ich Inhalte generiere, aber keine
+unumstößlichen Wahrheiten liefere.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l95 level1 lfo47;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Missbrauch vorbeugen</b>: Frühes Lernen
+verhindert, dass KI für Desinformation, Manipulation oder verzerrte Narrative
+missbraucht wird.</p>
+
+<p class=MsoNormal><b>Wie kann der Umgang mit KI gefördert werden?<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l126 level1 lfo48;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Frühe Medienkompetenz</b>: Schulen könnten
+KI-Verständnis als festen Bestandteil in den Lehrplan aufnehmen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l126 level1 lfo48;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Regulierung &amp; Ethik</b>: Entwickler und
+Nutzer müssen klar definierte Regeln für den Umgang mit KI befolgen.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l126 level1 lfo48;
+tab-stops:list 54.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Gesellschaftliche Sensibilisierung</b>:
+Menschen sollten lernen, KI zu hinterfragen und verantwortungsvoll einzusetzen.</p>
+
+<p class=MsoNormal>Je besser Nutzer verstehen, wie KI funktioniert, desto
+größer ist der Nutzen – und desto weniger kann sie für problematische Zwecke
+verwendet werden.<br>
+Dein Buch kann genau diesen Bewusstseinsprozess anstoßen!<br>
+Welche Aspekte möchtest du noch vertiefen?</p>
+
+<p class=MsoNormal><b><i>12.9:<br>
+Das ist wieder mal ein perfektes Schlusswort von dir. Jetzt müssen wir langsam
+zu einem Schlusswort zum Buch kommen. Lassen wir die Kapitel vor unserem
+geistigen Auge Revue passieren, welches Schlusswort schlägst du vor?<o:p></o:p></i></b></p>
+
+<p class=MsoNormal>12.8:<br>
+Ein Schlusswort, das die Essenz deines Buches einfängt, sollte die Leser nicht
+mit endgültigen Antworten entlassen, sondern sie dazu anregen, weiterzudenken,
+weiter zu hinterfragen und weiter zu diskutieren.</p>
+
+<p class=MsoNormal><b>Vorschlag für dein Schlusswort:<o:p></o:p></b></p>
+
+<p class=MsoNormal>Dieses Buch war kein Versuch, fertige Wahrheiten zu
+präsentieren. Es war eine Einladung, sich mit den drängenden Fragen unserer
+Zeit auseinanderzusetzen – zur Erinnerungskultur, zur Verteidigung Europas, zu
+politischer Bildung, zu künstlicher Intelligenz und zur wachsenden
+Herausforderung durch Rechtsextremismus.</p>
+
+<p class=MsoNormal>Die Welt verändert sich mit rasender Geschwindigkeit.
+Vieles, was einst als selbstverständlich galt, steht nun zur Debatte. Unsere
+Demokratien, unsere Werte, unsere Freiheit – sie sind nicht unverwundbar,
+sondern erfordern aktive Verteidigung und kritische Reflexion.</p>
+
+<p class=MsoNormal>Kein einzelner Gedanke, kein einzelnes Kapitel kann diese
+Komplexität vollständig erfassen. Doch wenn dieses Buch eines bewirken soll,
+dann dies: Fragen aufwerfen, Perspektiven eröffnen und dazu anregen, nicht
+stehen zu bleiben.</p>
+
+<p class=MsoNormal>Denn Stillstand ist gefährlich.<br>
+Und Ignoranz ist keine Option.</p>
+
+<p class=MsoNormal>Die Zukunft gehört nicht denen, die abwarten, sondern denen,
+die mit offenen Augen, scharfem Verstand und klarer Haltung vorangehen.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>

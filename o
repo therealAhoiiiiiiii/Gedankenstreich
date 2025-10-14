@@ -1,0 +1,20 @@
+  Gesamtwerk                                                     [m 49d3c73 [[34morigin/Gesamtwerk[m: ahead 1] Add src/styles/background.css
+  fix/background-and-cover                                       [m 8c816cd [[34morigin/fix/background-and-cover[m] Improve hero background contrast and remove white artifact from cover-band-1.png
+  fix/background-contrast                                        [m 49d3c73 Add src/styles/background.css
+  fix/restore-chapters-backup                                    [m 380d572 feat: Lokalen Entwicklungsstand synchronisiert und Bilder wiederhergestellt
+  main                                                           [m f5288e9 [[34morigin/main[m] Merge pull request #6 from therealAhoiiiiiiii/restore/milestone
+  restore-geniestreich                                           [m 366e1f6 [[34morigin/restore-geniestreich[m: behind 2] Restore gesamtwerk page: use Layout and ensure background loads
+* [32mrestore-geniestreich-labels                                    [m f5288e9 [[34morigin/restore-geniestreich-labels[m: gone] Merge pull request #6 from therealAhoiiiiiiii/restore/milestone
+  restore/runbook                                                [m 271f033 [[34morigin/restore/runbook[m] chore(milestone): add assets and components, remove large background
+  workspace/baseline                                             [m 380d572 feat: Lokalen Entwicklungsstand synchronisiert und Bilder wiederhergestellt
+  [31mremotes/origin/Gesamtwerk                                      [m 380d572 feat: Lokalen Entwicklungsstand synchronisiert und Bilder wiederhergestellt
+  [31mremotes/origin/HEAD                                            [m -> origin/main
+  [31mremotes/origin/copilot/fix-9367c2d6-26fd-43fc-a0c6-106fe7b6bdcf[m 0096149 Initial plan
+  [31mremotes/origin/copilot/fix-a374265f-9f56-4ce8-bb83-ab2c15fc3642[m 0e160e3 Fix Gesamtwerk page: add global.css import and fix syntax error
+  [31mremotes/origin/copilot/fix-f0abdaef-9c41-4cf6-9ca6-42abf7015452[m fa928e2 Initial plan
+  [31mremotes/origin/feat/create-das-werk-page                       [m 008b8de feat: Implement intro trailer and main content structure
+  [31mremotes/origin/fix/background-and-cover                        [m 8c816cd Improve hero background contrast and remove white artifact from cover-band-1.png
+  [31mremotes/origin/fix/index-background                            [m 40c9768 Update index.astro with new content
+  [31mremotes/origin/main                                            [m f5288e9 Merge pull request #6 from therealAhoiiiiiiii/restore/milestone
+  [31mremotes/origin/restore-geniestreich                            [m a6bc337 Restore: load global styles and add global background image
+  [31mremotes/origin/restore/runbook                                 [m 271f033 chore(milestone): add assets and components, remove large background
